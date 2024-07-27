@@ -1,0 +1,22 @@
+{
+  "name": "socket-chat-example",
+  "version": "0.0.1",
+  "private": true,
+  "description": "my first socket.io app",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "@socket.io/cluster-adapter": "^0.2.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "nodemon": "^3.1.4"
+  }
+}
