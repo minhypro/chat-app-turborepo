@@ -8,8 +8,7 @@ export const createUserTable = async (db: ChatDatabase): Promise<void> => {
   try {
     await db.exec(`
        CREATE TABLE IF NOT EXISTS User (
-        id TEXT PRIMARY KEY NOT NULL,
-        name TEXT NOT NULL UNIQUE,
+        name TEXT PRIMARY KEY NOT NULL,
         is_online BOOLEAN NOT NULL,
         last_ping TEXT NOT NULL
         )

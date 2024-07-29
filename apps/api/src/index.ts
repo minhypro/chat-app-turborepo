@@ -8,6 +8,33 @@ import cors from "cors";
 import { initDb } from "./db";
 import { config } from "./config";
 import { userServices } from "./services/user";
+import { ChatDatabase } from "./global.type";
+import { channelRoom, userRoom } from "./utils";
+
+const initEventHandlers = (io: Server, db: ChatDatabase) => {
+  io.use(async (socket, next) => {
+    const { name } = socket.handshake.auth;
+
+    let channels;
+
+    try {
+      channels = await userServices.fetchUserChannels(db, name);
+    } catch (e) {
+      return next(new Error("something went wrong"));
+    }
+
+    channels?.length &&
+      channels.forEach((channelId) => {
+        socket.join(channelRoom(channelId));
+      });
+
+    socket.join(userRoom(name));
+
+    next();
+  });
+};
+
+// Main application
 
 (async () => {
   // Open the database
@@ -32,10 +59,12 @@ import { userServices } from "./services/user";
     res.sendFile(join(__dirname, "user2.html"));
   });
 
+  initEventHandlers(io, db);
+
   io.on("connection", async (socket: Socket) => {
     const { name } = socket.handshake.auth;
     const user = await userServices.connect(db, name);
-    console.log("user connected", user);
+
     // socket.on("channel:create", createChannel({ io, socket, db }));
     // socket.on("channel:join", joinChannel({ io, socket, db }));
     // socket.on("channel:list", listChannels({ io, socket, db }));

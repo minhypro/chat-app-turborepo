@@ -1,6 +1,6 @@
 import { ChatDatabase } from "@/global.type";
 import { User } from "./type";
-import { logger } from "@/services/utils";
+import { logger } from "@/utils";
 
 export const updateUser = async (
   db: ChatDatabase,

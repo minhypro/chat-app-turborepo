@@ -1,4 +1,5 @@
 import { ChatDatabase } from "@/global.type";
+import { logger } from "@/utils";
 
 /**
  * Create UserChannel table in sqlite database. To store the relationship between user and channel
@@ -10,16 +11,16 @@ export const createUserChannelTable = async (
   try {
     await db.exec(`
       CREATE TABLE IF NOT EXISTS UserChannels (
-      user_id TEXT NOT NULL,
-      UserChannel_id TEXT NOT NULL,
+      user_name TEXT NOT NULL,
+      channel_id TEXT NOT NULL,
       client_offset INTEGER NOT NULL,
-      PRIMARY KEY (user_id, UserChannel_id),
-      FOREIGN KEY (user_id) REFERENCES User(id),
-      FOREIGN KEY (UserChannel_id) REFERENCES UserChannel(id)
+      PRIMARY KEY (user_name, Channel_id),
+      FOREIGN KEY (user_name) REFERENCES User(name),
+      FOREIGN KEY (channel_id) REFERENCES Channel(id)
       FOREIGN KEY (client_offset) REFERENCES Messages(id)
     )`);
-    console.log("Table UserChannel created successfully");
+    logger.info("Table UserChannel created successfully");
   } catch (error) {
-    console.error("Error creating UserChannel table:", error);
+    logger.error("Error creating UserChannel table:", error);
   }
 };
