@@ -1,7 +1,18 @@
-import { createLogger, transports } from "winston";
+import { createLogger, transports, format } from "winston";
+import Ajv from "ajv";
+import addFormats from "ajv-formats";
+
+const ajv = new Ajv({
+  useDefaults: true,
+});
+
+addFormats(ajv);
+
+export { ajv };
 
 export const logger = createLogger({
   level: "info",
+  format: format.combine(format.splat(), format.simple()),
   transports: [
     new transports.File({ filename: "error.log", level: "error" }),
     new transports.File({ filename: "combined.log" }),

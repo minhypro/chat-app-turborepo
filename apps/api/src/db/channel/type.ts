@@ -4,7 +4,7 @@ export interface Channel {
   type: ChannelType;
 }
 
-enum ChannelType {
+export enum ChannelType {
   PUBLIC = "public",
   PRIVATE = "private",
 }

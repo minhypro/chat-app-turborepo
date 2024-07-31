@@ -5,9 +5,11 @@ export const connect = async (db: ChatDatabase, name: string) => {
   const foundUser = await dbHelper.userDb.findUserByName(db, name);
 
   if (!foundUser) {
-    return dbHelper.userDb.insertUser(db, name);
+    dbHelper.userDb.insertUser(db, name);
   }
 
-  dbHelper.userDb.updateUser(db, name, { is_online: true });
-  return foundUser;
+  dbHelper.userDb.updateUser(db, name, {
+    is_online: true,
+    last_ping: new Date().toISOString(),
+  });
 };

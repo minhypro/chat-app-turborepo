@@ -107,7 +107,7 @@
       });
 
       const clearChatBtn = document.getElementById("clear-btn");
-      clearChatBtn.addEventListener("click", (e) => {
+      clearChatBtn.addEventListener("click", async (e) => {
         e.preventDefault();
         socket.emit("clear chat");
       });

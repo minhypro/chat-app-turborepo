@@ -1,4 +1,5 @@
 import { ChatDatabase } from "@/global.type";
+import { logger } from "@/utils";
 
 /**
  * Create messages table in sqlite database. To store the messages
@@ -17,8 +18,8 @@ export const createMessagesTable = async (db: ChatDatabase): Promise<void> => {
         read_at TEXT
         )
         `);
-    console.log("Table Messages created successfully");
+    logger.info("Table Messages created successfully");
   } catch (error) {
-    console.error("Error creating Messages table:", error);
+    logger.error("Error creating Messages table:", error);
   }
 };

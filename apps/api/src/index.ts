@@ -10,10 +10,12 @@ import { config } from "./config";
 import { userServices } from "./services/user";
 import { ChatDatabase } from "./global.type";
 import { channelRoom, userRoom } from "./utils";
+import { channelServices } from "./services/channel";
 
 const initEventHandlers = (io: Server, db: ChatDatabase) => {
   io.use(async (socket, next) => {
     const { name } = socket.handshake.auth;
+    await userServices.connect(db, name);
 
     let channels;
 
@@ -63,9 +65,11 @@ const initEventHandlers = (io: Server, db: ChatDatabase) => {
 
   io.on("connection", async (socket: Socket) => {
     const { name } = socket.handshake.auth;
-    const user = await userServices.connect(db, name);
 
-    // socket.on("channel:create", createChannel({ io, socket, db }));
+    socket.on(
+      "channel:create",
+      channelServices.createChannel({ io, socket, db })
+    );
     // socket.on("channel:join", joinChannel({ io, socket, db }));
     // socket.on("channel:list", listChannels({ io, socket, db }));
     // socket.on("channel:search", searchChannels({ io, socket, db }));
@@ -94,16 +98,17 @@ const initEventHandlers = (io: Server, db: ChatDatabase) => {
     });
 
     socket.on("chat message", async (msg: string) => {
+      console.log(msg);
       let result;
-      try {
-        // Store the message in the database
-        result = await db.run("INSERT INTO messages (content) VALUES (?)", msg);
-      } catch (e) {
-        console.error("Failed to store chat message:", e);
-        return;
-      }
-      // Include the offset with the message
-      io.emit("chat message", msg, result.lastID);
+      // try {
+      //   // Store the message in the database
+      //   result = await db.run("INSERT INTO messages (content) VALUES (?)", msg);
+      // } catch (e) {
+      //   console.error("Failed to store chat message:", e);
+      //   return;
+      // }
+      // // Include the offset with the message
+      io.to(userRoom(name)).emit("chat message", msg, "123");
     });
 
     if (!socket.recovered) {
