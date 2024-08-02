@@ -3,7 +3,7 @@ import { open } from "sqlite";
 import { ChatDatabase } from "@/global.type";
 import { channelDb } from "./channel";
 import { messageDb } from "./message";
-import { userChannelDb } from "./user-channel";
+import { channelMemberDb } from "./channel-member";
 import { dbHelper } from "./helper";
 
 // Function to open the database
@@ -19,6 +19,6 @@ export const initDb = async () => {
   await channelDb.createChannelTable(db);
   await messageDb.createMessagesTable(db);
   await dbHelper.userDb.createUserTable(db);
-  await userChannelDb.createUserChannelTable(db);
+  await channelMemberDb.createChannelMembersTable(db);
   return db;
 };

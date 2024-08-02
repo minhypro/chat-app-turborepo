@@ -9,28 +9,27 @@ import { initDb } from "./db";
 import { config } from "./config";
 import { userServices } from "./services/user";
 import { ChatDatabase } from "./global.type";
-import { channelRoom, userRoom } from "./utils";
+import { channelRoom, getUsernameFromSocket, userRoom } from "./utils";
 import { channelServices } from "./services/channel";
+import { messageServices } from "./services/message";
 
 const initEventHandlers = (io: Server, db: ChatDatabase) => {
   io.use(async (socket, next) => {
-    const { name } = socket.handshake.auth;
-    await userServices.connect(db, name);
-
-    let channels;
+    const username = getUsernameFromSocket(socket);
+    await userServices.connect(db, username);
 
     try {
-      channels = await userServices.fetchUserChannels(db, name);
+      const channels = await userServices.fetchUserChannels(db, username);
+
+      channels?.length &&
+        channels.forEach((channelId: string) => {
+          socket.join(channelRoom(channelId));
+        });
+
+      socket.join(userRoom(username));
     } catch (e) {
       return next(new Error("something went wrong"));
     }
-
-    channels?.length &&
-      channels.forEach((channelId) => {
-        socket.join(channelRoom(channelId));
-      });
-
-    socket.join(userRoom(name));
 
     next();
   });
@@ -64,7 +63,7 @@ const initEventHandlers = (io: Server, db: ChatDatabase) => {
   initEventHandlers(io, db);
 
   io.on("connection", async (socket: Socket) => {
-    const { name } = socket.handshake.auth;
+    const username = getUsernameFromSocket(socket);
 
     socket.on(
       "channel:create",
@@ -78,13 +77,13 @@ const initEventHandlers = (io: Server, db: ChatDatabase) => {
     // socket.on("user:reach", reachUser({ io, socket, db }));
     // socket.on("user:search", searchUsers({ io, socket, db }));
 
-    // socket.on("message:send", sendMessage({ io, socket, db }));
+    socket.on("message:send", messageServices.sendMessage({ io, socket, db }));
     // socket.on("message:list", listMessages({ io, socket, db }));
     // socket.on("message:ack", ackMessage({ io, socket, db }));
     // socket.on("message:typing", typingMessage({ io, socket, db }));
 
     socket.on("disconnect", async () => {
-      await userServices.disconnect(db, name);
+      await userServices.disconnect(db, username);
     });
 
     socket.on("clear chat", async () => {
@@ -108,22 +107,22 @@ const initEventHandlers = (io: Server, db: ChatDatabase) => {
       //   return;
       // }
       // // Include the offset with the message
-      io.to(userRoom(name)).emit("chat message", msg, "123");
+      io.to(userRoom(username)).emit("chat message", msg, "123");
     });
 
     if (!socket.recovered) {
       // If the connection state recovery was not successful
-      try {
-        await db.each(
-          "SELECT id, content FROM messages WHERE id > ?",
-          [socket.handshake.auth.serverOffset || 0],
-          (_err: Error | null, row: { id: number; content: string }) => {
-            socket.emit("chat message", row.content, row.id);
-          }
-        );
-      } catch (e) {
-        console.error("Failed to recover messages:", e);
-      }
+      // try {
+      //   await db.each(
+      //     "SELECT id, content FROM messages WHERE id > ?",
+      //     [socket.handshake.auth.serverOffset || 0],
+      //     (_err: Error | null, row: { id: number; content: string }) => {
+      //       socket.emit("chat message", row.content, row.id);
+      //     }
+      //   );
+      // } catch (e) {
+      //   console.error("Failed to recover messages:", e);
+      // }
     }
   });
 

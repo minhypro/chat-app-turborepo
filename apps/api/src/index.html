@@ -80,7 +80,10 @@
       form.addEventListener("submit", (e) => {
         e.preventDefault();
         if (input.value) {
-          socket.emit("chat message", input.value);
+          socket.emitWithAck("message:send", {
+            content: input.value,
+            channelId: "b6d009aa-d2c5-4e59-a6de-a8cf076da378",
+          });
           input.value = "";
         }
       });

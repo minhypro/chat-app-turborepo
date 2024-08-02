@@ -1,6 +1,7 @@
 import { createLogger, transports, format } from "winston";
 import Ajv from "ajv";
 import addFormats from "ajv-formats";
+import { Socket } from "socket.io";
 
 const ajv = new Ajv({
   useDefaults: true,
@@ -32,4 +33,8 @@ export function userRoom(userId: string) {
 
 export function userStateRoom(userId: string) {
   return `user_state:${userId}`;
+}
+
+export function getUsernameFromSocket(socket: Socket) {
+  return socket.handshake.auth.name as string;
 }

@@ -5,5 +5,7 @@ export interface Message {
   sent_at: string;
   content: string;
   is_read: boolean;
-  read_at: string;
+  read_at: string | null;
 }
+
+export type MessageDTO = Pick<Message, "channel_id" | "sender_id" | "content">;

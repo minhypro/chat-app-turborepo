@@ -8,6 +8,7 @@
   "scripts": {
     "start": "node dist/index.js",
     "dev": "tsx watch src/index.ts",
+    "typecheck": "tsc --noEmit",
     "compile": "tsc"
   },
   "dependencies": {

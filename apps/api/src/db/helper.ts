@@ -1,9 +1,11 @@
 import { channelDb } from "./channel";
+import { messageDb } from "./message";
 import { userDb } from "./user";
-import { userChannelDb } from "./user-channel";
+import { channelMemberDb } from "./channel-member";
 
 export const dbHelper = {
   userDb,
-  userChannelDb,
+  channelMemberDb,
   channelDb,
+  messageDb,
 };

@@ -1,24 +1,11 @@
-import { Server, Socket } from "socket.io";
-import { ajv, logger, userRoom } from "@/utils";
-import { ChatDatabase } from "@/global.type";
+import { ajv, getUsernameFromSocket, logger, userRoom } from "@/utils";
 import { dbHelper } from "@/db";
 import { Channel, ChannelType } from "@/db/channel/type";
-
-interface ICreateChannel {
-  io: Server;
-  socket: Socket;
-  db: ChatDatabase;
-}
+import { IEventListeners, TEventListenerCallback } from "../type";
 
 interface ICreateChannelPayload {
   name: string;
 }
-
-type TCreateChannelCallback = (arg0: {
-  status: string;
-  errors?: any;
-  data?: any;
-}) => void;
 
 const validate = ajv.compile<ICreateChannelPayload>({
   type: "object",
@@ -30,11 +17,11 @@ const validate = ajv.compile<ICreateChannelPayload>({
   additionalProperties: false,
 });
 
-export function createChannel({ io, socket, db }: ICreateChannel) {
-  const username = socket.handshake.auth.name;
+export function createChannel({ io, socket, db }: IEventListeners) {
+  const username = getUsernameFromSocket(socket);
   return async (
     payload: ICreateChannelPayload,
-    callback: TCreateChannelCallback
+    callback: TEventListenerCallback
   ) => {
     if (typeof callback !== "function") {
       return;
