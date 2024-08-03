@@ -1,7 +1,7 @@
-import { ajv, channelRoom, getUsernameFromSocket } from "@/utils";
-import { IEventListeners, TEventListenerCallback } from "../type";
-import { dbHelper } from "@/db";
-import { MessageDTO } from "@/db/message/type";
+import { ajv, channelRoom, getUsernameFromSocket } from '@/utils';
+import { IEventListeners, TEventListenerCallback } from '../type';
+import { dbHelper } from '@/db';
+import { MessageDTO } from '@/db/message/type';
 
 interface ISendMessagePayload {
   content: string;
@@ -9,28 +9,25 @@ interface ISendMessagePayload {
 }
 
 const validate = ajv.compile<ISendMessagePayload>({
-  type: "object",
+  type: 'object',
   properties: {
-    content: { type: "string", minLength: 1, maxLength: 5000 },
-    channelId: { type: "string", format: "uuid" },
+    content: { type: 'string', minLength: 1, maxLength: 5000 },
+    channelId: { type: 'string', format: 'uuid' },
   },
-  required: ["content", "channelId"],
+  required: ['content', 'channelId'],
   additionalProperties: false,
 });
 
 export function sendMessage({ io, socket, db }: IEventListeners) {
   const username = getUsernameFromSocket(socket);
-  return async (
-    payload: ISendMessagePayload,
-    callback: TEventListenerCallback
-  ) => {
-    if (typeof callback !== "function") {
+  return async (payload: ISendMessagePayload, callback: TEventListenerCallback) => {
+    if (typeof callback !== 'function') {
       return;
     }
 
     if (!validate(payload)) {
       return callback({
-        status: "ERROR",
+        status: 'ERROR',
         errors: validate.errors,
       });
     }
@@ -42,24 +39,19 @@ export function sendMessage({ io, socket, db }: IEventListeners) {
     };
 
     try {
-      const createdMessage = await dbHelper.messageDb.insertMessage(
-        db,
-        message
-      );
+      const createdMessage = await dbHelper.messageDb.insertMessage(db, message);
 
-      socket.broadcast
-        .to(channelRoom(message.channel_id))
-        .emit("message:sent", message);
+      socket.broadcast.to(channelRoom(message.channel_id)).emit('message:sent', message);
 
       callback({
-        status: "OK",
+        status: 'OK',
         data: {
           message: createdMessage,
         },
       });
     } catch (_) {
       return callback({
-        status: "ERROR",
+        status: 'ERROR',
       });
     }
   };

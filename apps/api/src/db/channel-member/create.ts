@@ -1,13 +1,11 @@
-import { ChatDatabase } from "@/global.type";
-import { logger } from "@/utils";
+import { ChatDatabase } from '@/global.type';
+import { logger } from '@/utils';
 
 /**
  * Create ChatMembers table in sqlite database. To store the relationship between user and channel
  * @param db Database instance
  */
-export const createChannelMembersTable = async (
-  db: ChatDatabase
-): Promise<void> => {
+export const createChannelMembersTable = async (db: ChatDatabase): Promise<void> => {
   try {
     await db.exec(`
       CREATE TABLE IF NOT EXISTS ChatMembers (
@@ -18,8 +16,8 @@ export const createChannelMembersTable = async (
         FOREIGN KEY(chat_id) REFERENCES Chats(id),
         FOREIGN KEY(user_id) REFERENCES Users(id)
     )`);
-    logger.info("Table ChatMembers created successfully");
+    logger.info('Table ChatMembers created successfully');
   } catch (error) {
-    logger.error("Error creating ChatMembers table:", error);
+    logger.error('Error creating ChatMembers table:', error);
   }
 };

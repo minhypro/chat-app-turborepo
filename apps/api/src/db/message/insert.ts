@@ -1,11 +1,8 @@
-import { ChatDatabase } from "@/global.type";
-import { Message, MessageDTO } from "./type";
-import { v4 as uuidv4 } from "uuid";
+import { ChatDatabase } from '@/global.type';
+import { Message, MessageDTO } from './type';
+import { v4 as uuidv4 } from 'uuid';
 
-export const insertMessage = async (
-  db: ChatDatabase,
-  message: MessageDTO
-): Promise<Message> => {
+export const insertMessage = async (db: ChatDatabase, message: MessageDTO): Promise<Message> => {
   const newMessage: Message = {
     id: uuidv4(),
     channel_id: message.channel_id,

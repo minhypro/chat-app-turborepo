@@ -1,5 +1,5 @@
-import { ChatDatabase } from "@/global.type";
-import { logger } from "@/utils";
+import { ChatDatabase } from '@/global.type';
+import { logger } from '@/utils';
 
 /**
  * Get all Channels of a specific user
@@ -14,12 +14,12 @@ export const fetchUserChannels = async (db: ChatDatabase, userId: string) => {
        FROM Channels
        JOIN ChannelMembers ON Channels.id = ChannelMembers.channel_id
        WHERE ChannelMembers.user_id = ?`,
-      [userId]
+      [userId],
     );
 
     logger.log(`Channels for user ${userId}:`, channels);
     return channels;
   } catch (error) {
-    logger.error("Error fetching user channels:", error);
+    logger.error('Error fetching user channels:', error);
   }
 };

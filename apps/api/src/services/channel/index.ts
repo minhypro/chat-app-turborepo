@@ -1,4 +1,4 @@
-import { createChannel } from "./create";
+import { createChannel } from './create';
 
 export const channelServices = {
   createChannel,

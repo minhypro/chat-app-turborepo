@@ -1,5 +1,5 @@
-import { ChatDatabase } from "@/global.type";
-import { logger } from "@/utils";
+import { ChatDatabase } from '@/global.type';
+import { logger } from '@/utils';
 
 /**
  * Create Channels table in sqlite database. To store the channels
@@ -17,8 +17,8 @@ export const createChannelTable = async (db: ChatDatabase): Promise<void> => {
     );
     
       `);
-    logger.info("Table Channels created successfully");
+    logger.info('Table Channels created successfully');
   } catch (error) {
-    logger.error("Error creating Channels table:", error);
+    logger.error('Error creating Channels table:', error);
   }
 };

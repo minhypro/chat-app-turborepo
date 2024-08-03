@@ -1,15 +1,15 @@
-import sqlite3 from "sqlite3";
-import { open } from "sqlite";
-import { ChatDatabase } from "@/global.type";
-import { channelDb } from "./channel";
-import { messageDb } from "./message";
-import { channelMemberDb } from "./channel-member";
-import { dbHelper } from "./helper";
+import sqlite3 from 'sqlite3';
+import { open } from 'sqlite';
+import { ChatDatabase } from '@/global.type';
+import { channelDb } from './channel';
+import { messageDb } from './message';
+import { channelMemberDb } from './channel-member';
+import { dbHelper } from './helper';
 
 // Function to open the database
 const openDatabase = async (): Promise<ChatDatabase> => {
   return open({
-    filename: "chat.db",
+    filename: 'chat.db',
     driver: sqlite3.Database,
   });
 };

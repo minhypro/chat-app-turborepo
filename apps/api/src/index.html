@@ -7,8 +7,7 @@
       body {
         margin: 0;
         padding-bottom: 3rem;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          Helvetica, Arial, sans-serif;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       }
 
       #form {
@@ -69,55 +68,55 @@
     <script>
       const socket = io({
         auth: {
-          name: "mike",
+          name: 'mike',
         },
       });
 
-      const form = document.getElementById("form");
-      const input = document.getElementById("input");
-      const messages = document.getElementById("messages");
+      const form = document.getElementById('form');
+      const input = document.getElementById('input');
+      const messages = document.getElementById('messages');
 
-      form.addEventListener("submit", (e) => {
+      form.addEventListener('submit', e => {
         e.preventDefault();
         if (input.value) {
-          socket.emitWithAck("message:send", {
+          socket.emitWithAck('message:send', {
             content: input.value,
-            channelId: "b6d009aa-d2c5-4e59-a6de-a8cf076da378",
+            channelId: 'b6d009aa-d2c5-4e59-a6de-a8cf076da378',
           });
-          input.value = "";
+          input.value = '';
         }
       });
 
-      socket.on("chat message", (msg, serverOffset) => {
-        const item = document.createElement("li");
+      socket.on('chat message', (msg, serverOffset) => {
+        const item = document.createElement('li');
         item.textContent = msg;
         messages.appendChild(item);
         window.scrollTo(0, document.body.scrollHeight);
         socket.auth.serverOffset = serverOffset;
       });
 
-      const toggleButton = document.getElementById("toggle-btn");
+      const toggleButton = document.getElementById('toggle-btn');
 
-      toggleButton.addEventListener("click", (e) => {
+      toggleButton.addEventListener('click', e => {
         e.preventDefault();
         if (socket.connected) {
-          toggleButton.innerText = "Connect";
+          toggleButton.innerText = 'Connect';
           socket.disconnect();
         } else {
-          toggleButton.innerText = "Disconnect";
+          toggleButton.innerText = 'Disconnect';
           socket.connect();
         }
       });
 
-      const clearChatBtn = document.getElementById("clear-btn");
-      clearChatBtn.addEventListener("click", async (e) => {
+      const clearChatBtn = document.getElementById('clear-btn');
+      clearChatBtn.addEventListener('click', async e => {
         e.preventDefault();
-        socket.emit("clear chat");
+        socket.emit('clear chat');
       });
 
-      socket.on("chat cleared", () => {
-        console.log("chat cleared");
-        messages.innerHTML = "";
+      socket.on('chat cleared', () => {
+        console.log('chat cleared');
+        messages.innerHTML = '';
       });
     </script>
   </body>

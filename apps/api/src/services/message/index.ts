@@ -1,4 +1,4 @@
-import { sendMessage } from "./send";
+import { sendMessage } from './send';
 
 export const messageServices = {
   sendMessage,

@@ -1,7 +1,7 @@
-import { createLogger, transports, format } from "winston";
-import Ajv from "ajv";
-import addFormats from "ajv-formats";
-import { Socket } from "socket.io";
+import { createLogger, transports, format } from 'winston';
+import Ajv from 'ajv';
+import addFormats from 'ajv-formats';
+import { Socket } from 'socket.io';
 
 const ajv = new Ajv({
   useDefaults: true,
@@ -12,14 +12,14 @@ addFormats(ajv);
 export { ajv };
 
 export const logger = createLogger({
-  level: "info",
+  level: 'info',
   format: format.combine(format.splat(), format.simple()),
   transports: [
-    new transports.File({ filename: "error.log", level: "error" }),
-    new transports.File({ filename: "combined.log" }),
+    new transports.File({ filename: 'error.log', level: 'error' }),
+    new transports.File({ filename: 'combined.log' }),
   ],
 });
-if (process.env.NODE_ENV !== "production") {
+if (process.env.NODE_ENV !== 'production') {
   logger.add(new transports.Console());
 }
 

@@ -1,5 +1,5 @@
-import { ChatDatabase } from "@/global.type";
-import { logger } from "@/utils";
+import { ChatDatabase } from '@/global.type';
+import { logger } from '@/utils';
 
 /**
  * Create User table in sqlite database. To store the users
@@ -17,8 +17,8 @@ export const createUserTable = async (db: ChatDatabase): Promise<void> => {
       updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
     );
   `);
-    logger.info("Table User created successfully");
+    logger.info('Table User created successfully');
   } catch (error) {
-    logger.error("Error creating User table:", error);
+    logger.error('Error creating User table:', error);
   }
 };

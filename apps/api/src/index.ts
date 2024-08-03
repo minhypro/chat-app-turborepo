@@ -1,17 +1,17 @@
-import express, { Request, Response } from "express";
-import { createServer } from "node:http";
-import { fileURLToPath } from "node:url";
-import { dirname, join } from "node:path";
-import { Server, Socket } from "socket.io";
+import express, { Request, Response } from 'express';
+import { createServer } from 'node:http';
+import { fileURLToPath } from 'node:url';
+import { dirname, join } from 'node:path';
+import { Server, Socket } from 'socket.io';
 
-import cors from "cors";
-import { initDb } from "./db";
-import { config } from "./config";
-import { userServices } from "./services/user";
-import { ChatDatabase } from "./global.type";
-import { channelRoom, getUsernameFromSocket, userRoom } from "./utils";
-import { channelServices } from "./services/channel";
-import { messageServices } from "./services/message";
+import cors from 'cors';
+import { initDb } from './db';
+import { config } from './config';
+import { userServices } from './services/user';
+import { ChatDatabase } from './global.type';
+import { channelRoom, getUsernameFromSocket, userRoom } from './utils';
+import { channelServices } from './services/channel';
+import { messageServices } from './services/message';
 
 const initEventHandlers = (io: Server, db: ChatDatabase) => {
   io.use(async (socket, next) => {
@@ -28,7 +28,7 @@ const initEventHandlers = (io: Server, db: ChatDatabase) => {
 
       socket.join(userRoom(username));
     } catch (e) {
-      return next(new Error("something went wrong"));
+      return next(new Error('something went wrong'));
     }
 
     next();
@@ -52,23 +52,20 @@ const initEventHandlers = (io: Server, db: ChatDatabase) => {
 
   const __dirname = dirname(fileURLToPath(import.meta.url));
 
-  app.get("/", (req: Request, res: Response) => {
-    res.sendFile(join(__dirname, "index.html"));
+  app.get('/', (req: Request, res: Response) => {
+    res.sendFile(join(__dirname, 'index.html'));
   });
 
-  app.get("/user2", (req: Request, res: Response) => {
-    res.sendFile(join(__dirname, "user2.html"));
+  app.get('/user2', (req: Request, res: Response) => {
+    res.sendFile(join(__dirname, 'user2.html'));
   });
 
   initEventHandlers(io, db);
 
-  io.on("connection", async (socket: Socket) => {
+  io.on('connection', async (socket: Socket) => {
     const username = getUsernameFromSocket(socket);
 
-    socket.on(
-      "channel:create",
-      channelServices.createChannel({ io, socket, db })
-    );
+    socket.on('channel:create', channelServices.createChannel({ io, socket, db }));
     // socket.on("channel:join", joinChannel({ io, socket, db }));
     // socket.on("channel:list", listChannels({ io, socket, db }));
     // socket.on("channel:search", searchChannels({ io, socket, db }));
@@ -77,26 +74,26 @@ const initEventHandlers = (io: Server, db: ChatDatabase) => {
     // socket.on("user:reach", reachUser({ io, socket, db }));
     // socket.on("user:search", searchUsers({ io, socket, db }));
 
-    socket.on("message:send", messageServices.sendMessage({ io, socket, db }));
+    socket.on('message:send', messageServices.sendMessage({ io, socket, db }));
     // socket.on("message:list", listMessages({ io, socket, db }));
     // socket.on("message:ack", ackMessage({ io, socket, db }));
     // socket.on("message:typing", typingMessage({ io, socket, db }));
 
-    socket.on("disconnect", async () => {
+    socket.on('disconnect', async () => {
       await userServices.disconnect(db, username);
     });
 
-    socket.on("clear chat", async () => {
+    socket.on('clear chat', async () => {
       try {
-        await db.run("DELETE FROM messages");
+        await db.run('DELETE FROM messages');
       } catch (e) {
-        console.error("Failed to clear chat:", e);
+        console.error('Failed to clear chat:', e);
         return;
       }
-      io.emit("chat cleared");
+      io.emit('chat cleared');
     });
 
-    socket.on("chat message", async (msg: string) => {
+    socket.on('chat message', async (msg: string) => {
       console.log(msg);
       let result;
       // try {
@@ -107,7 +104,7 @@ const initEventHandlers = (io: Server, db: ChatDatabase) => {
       //   return;
       // }
       // // Include the offset with the message
-      io.to(userRoom(username)).emit("chat message", msg, "123");
+      io.to(userRoom(username)).emit('chat message', msg, '123');
     });
 
     if (!socket.recovered) {

@@ -8,4 +8,4 @@ export interface Message {
   read_at: string | null;
 }
 
-export type MessageDTO = Pick<Message, "channel_id" | "sender_id" | "content">;
+export type MessageDTO = Pick<Message, 'channel_id' | 'sender_id' | 'content'>;

@@ -5,6 +5,6 @@ export interface Channel {
 }
 
 export enum ChannelType {
-  PUBLIC = "public",
-  PRIVATE = "private",
+  PUBLIC = 'public',
+  PRIVATE = 'private',
 }

@@ -1,5 +1,5 @@
-import { createMessagesTable } from "./create";
-import { insertMessage } from "./insert";
+import { createMessagesTable } from './create';
+import { insertMessage } from './insert';
 
 export const messageDb = {
   createMessagesTable,

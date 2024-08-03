@@ -1,5 +1,5 @@
-import { Server, Socket } from "socket.io";
-import { ChatDatabase } from "@/global.type";
+import { Server, Socket } from 'socket.io';
+import { ChatDatabase } from '@/global.type';
 
 export interface IEventListeners {
   io: Server;
@@ -7,8 +7,4 @@ export interface IEventListeners {
   db: ChatDatabase;
 }
 
-export type TEventListenerCallback = (arg0: {
-  status: string;
-  errors?: any;
-  data?: any;
-}) => void;
+export type TEventListenerCallback = (arg0: { status: string; errors?: any; data?: any }) => void;
