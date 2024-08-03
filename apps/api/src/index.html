@@ -122,7 +122,13 @@
       const clearChatBtn = document.getElementById('clear-btn');
       clearChatBtn.addEventListener('click', async e => {
         e.preventDefault();
-        socket.emit('clear chat');
+
+        socket.emitWithAck('chat:list', {
+          offset: 0,
+          limit: 100,
+          query: input.value,
+        });
+        // socket.emit('clear chat');
       });
 
       socket.on('chat cleared', () => {

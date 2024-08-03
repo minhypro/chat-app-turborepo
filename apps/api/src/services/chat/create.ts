@@ -16,7 +16,7 @@ const validate = ajv.compile<ICreateChannelPayload>({
   additionalProperties: false,
 });
 
-export function createChannel({ io, socket, db }: IEventListeners) {
+export function createChat({ io, socket, db }: IEventListeners) {
   const username = getUsernameFromSocket(socket);
   return async (payload: ICreateChannelPayload, callback: TEventListenerCallback) => {
     if (typeof callback !== 'function') {

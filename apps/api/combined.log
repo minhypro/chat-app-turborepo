@@ -717,3 +717,55 @@ info: User connected: mike channels: []
 {"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T13:43:49.844Z"}
 {"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T13:43:49.847Z"}
 {"level":"info","message":"User connected: mike chats: [{\"id\":1,\"name\":\"New chat\",\"is_group\":1,\"created_at\":\"2024-08-03 12:38:44\",\"updated_at\":\"2024-08-03 12:38:44\"}]","timestamp":"2024-08-03T13:43:50.027Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T15:55:13.933Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T15:55:13.935Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T15:55:13.936Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T15:55:13.936Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T15:55:13.938Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T16:16:05.891Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T16:16:05.893Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T16:16:05.893Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T16:16:05.894Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T16:16:05.895Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T16:16:20.584Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T16:16:20.586Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T16:16:20.587Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T16:16:20.587Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T16:16:20.589Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T16:17:03.166Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T16:17:03.168Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T16:17:03.169Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T16:17:03.169Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T16:17:03.171Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T16:18:07.230Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T16:18:07.232Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T16:18:07.232Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T16:18:07.233Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T16:18:07.235Z"}
+{"level":"info","message":"User connected: mike chats: [{\"id\":1,\"name\":\"New chat\",\"is_group\":1,\"created_at\":\"2024-08-03 12:38:44\",\"updated_at\":\"2024-08-03 12:38:44\"}]","timestamp":"2024-08-03T16:18:18.662Z"}
+{"level":"info","message":"User connected: mike chats: [{\"id\":1,\"name\":\"New chat\",\"is_group\":1,\"created_at\":\"2024-08-03 12:38:44\",\"updated_at\":\"2024-08-03 12:38:44\"}]","timestamp":"2024-08-03T16:18:29.515Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T16:19:11.275Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T16:19:11.277Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T16:19:11.278Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T16:19:11.278Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T16:19:11.280Z"}
+{"level":"info","message":"User connected: mike chats: [{\"id\":1,\"name\":\"New chat\",\"is_group\":1,\"created_at\":\"2024-08-03 12:38:44\",\"updated_at\":\"2024-08-03 12:38:44\"}]","timestamp":"2024-08-03T16:19:11.588Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T16:19:25.852Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T16:19:25.854Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T16:19:25.855Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T16:19:25.855Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T16:19:25.856Z"}
+{"level":"info","message":"User connected: mike chats: [{\"id\":1,\"name\":\"New chat\",\"is_group\":1,\"created_at\":\"2024-08-03 12:38:44\",\"updated_at\":\"2024-08-03 12:38:44\"}]","timestamp":"2024-08-03T16:19:26.593Z"}
+{"level":"info","message":"User connected: mike chats: [{\"id\":1,\"name\":\"New chat\",\"is_group\":1,\"created_at\":\"2024-08-03 12:38:44\",\"updated_at\":\"2024-08-03 12:38:44\"}]","timestamp":"2024-08-03T16:19:27.046Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T16:30:25.740Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T16:30:25.742Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T16:30:25.743Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T16:30:25.744Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T16:30:25.745Z"}
+{"level":"info","message":"User connected: mike chats: [{\"id\":1,\"name\":\"New chat\",\"is_group\":1,\"created_at\":\"2024-08-03 12:38:44\",\"updated_at\":\"2024-08-03 12:38:44\"}]","timestamp":"2024-08-03T16:30:25.793Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T16:30:36.887Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T16:30:36.889Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T16:30:36.889Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T16:30:36.890Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T16:30:36.891Z"}
+{"level":"info","message":"User connected: mike chats: [{\"id\":1,\"name\":\"New chat\",\"is_group\":1,\"created_at\":\"2024-08-03 12:38:44\",\"updated_at\":\"2024-08-03 12:38:44\"}]","timestamp":"2024-08-03T16:30:37.522Z"}

@@ -1,5 +1,7 @@
-import { createChannel } from './create';
+import { createChat } from './create';
+import { listChats } from './list';
 
 export const channelServices = {
-  createChannel,
+  createChat,
+  listChats,
 };
