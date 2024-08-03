@@ -1,9 +1,9 @@
 import { connect } from './connect';
 import { disconnect } from './disconnect';
-import { fetchUserChannels } from './fetch-user-channels';
+import { fetchUserChats } from './fetch-user-chats';
 
 export const userServices = {
   connect,
   disconnect,
-  fetchUserChannels,
+  fetchUserChats,
 };

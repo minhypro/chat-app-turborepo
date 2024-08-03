@@ -1,0 +1,34 @@
+undefined error: Error creating Channels table: Cannot read properties of undefined (reading 'split') (utils.ts:17)
+undefined error: Error creating Messages table: Cannot read properties of undefined (reading 'split') (utils.ts:17)
+undefined error: Error creating User table: Cannot read properties of undefined (reading 'split') (utils.ts:17)
+undefined error: Error creating ChannelMembers table: Cannot read properties of undefined (reading 'split') (utils.ts:17)
+error: Error inserting user: SQLITE_ERROR: table Users has no column named last_ping {"code":"SQLITE_ERROR","errno":1,"stack":"Error: SQLITE_ERROR: table Users has no column named last_ping"}
+error: Failed to update user: mike SQLITE_ERROR: no such table: User {"code":"SQLITE_ERROR","errno":1,"stack":"Error: SQLITE_ERROR: no such table: User"}
+error: Error fetching user channels: SQLITE_ERROR: no such column: ChannelMembers.channel_id {"code":"SQLITE_ERROR","errno":1,"stack":"Error: SQLITE_ERROR: no such column: ChannelMembers.channel_id"}
+error: Failed to update user: mike SQLITE_ERROR: no such table: User {"code":"SQLITE_ERROR","errno":1,"stack":"Error: SQLITE_ERROR: no such table: User"}
+error: Error inserting user: SQLITE_ERROR: table Users has no column named last_ping {"code":"SQLITE_ERROR","errno":1,"stack":"Error: SQLITE_ERROR: table Users has no column named last_ping"}
+error: Failed to update user: mike SQLITE_ERROR: no such table: User {"code":"SQLITE_ERROR","errno":1,"stack":"Error: SQLITE_ERROR: no such table: User"}
+error: Error fetching user channels: SQLITE_ERROR: no such column: ChannelMembers.channel_id {"code":"SQLITE_ERROR","errno":1,"stack":"Error: SQLITE_ERROR: no such column: ChannelMembers.channel_id"}
+error: Error inserting user: SQLITE_ERROR: table Users has no column named last_ping {"code":"SQLITE_ERROR","errno":1,"stack":"Error: SQLITE_ERROR: table Users has no column named last_ping"}
+error: Failed to update user: mike SQLITE_ERROR: no such table: User {"code":"SQLITE_ERROR","errno":1,"stack":"Error: SQLITE_ERROR: no such table: User"}
+error: Error fetching user channels: SQLITE_ERROR: no such column: ChannelMembers.channel_id {"code":"SQLITE_ERROR","errno":1,"stack":"Error: SQLITE_ERROR: no such column: ChannelMembers.channel_id"}
+error: Error inserting user: SQLITE_ERROR: table Users has no column named last_ping {"code":"SQLITE_ERROR","errno":1,"stack":"Error: SQLITE_ERROR: table Users has no column named last_ping"}
+error: Failed to update user: mike SQLITE_ERROR: no such table: User {"code":"SQLITE_ERROR","errno":1,"stack":"Error: SQLITE_ERROR: no such table: User"}
+error: Error fetching user channels: SQLITE_ERROR: no such table: ChatMembers {"code":"SQLITE_ERROR","errno":1,"stack":"Error: SQLITE_ERROR: no such table: ChatMembers"}
+error: Error fetching user channels: SQLITE_ERROR: no such column: ChannelMembers.name {"code":"SQLITE_ERROR","errno":1,"stack":"Error: SQLITE_ERROR: no such column: ChannelMembers.name"}
+error: Failed to update user: mike SQLITE_ERROR: no such table: User {"code":"SQLITE_ERROR","errno":1,"stack":"Error: SQLITE_ERROR: no such table: User"}
+error: Error fetching user channels: SQLITE_ERROR: no such column: ChannelMembers.name {"code":"SQLITE_ERROR","errno":1,"stack":"Error: SQLITE_ERROR: no such column: ChannelMembers.name"}
+error: Error fetching user channels: SQLITE_ERROR: no such column: ChannelMembers.name {"code":"SQLITE_ERROR","errno":1,"stack":"Error: SQLITE_ERROR: no such column: ChannelMembers.name"}
+error: Error fetching user channels: SQLITE_ERROR: no such column: ChannelMembers.name {"code":"SQLITE_ERROR","errno":1,"stack":"Error: SQLITE_ERROR: no such column: ChannelMembers.name"}
+{"code":"SQLITE_ERROR","errno":1,"level":"error","message":"Failed to update user: mike SQLITE_ERROR: no such table: User","stack":"Error: SQLITE_ERROR: no such table: User","timestamp":"2024-08-03T11:02:38.325Z"}
+{"code":"SQLITE_ERROR","errno":1,"level":"error","message":"Failed to update user: mike SQLITE_ERROR: no such table: User","stack":"Error: SQLITE_ERROR: no such table: User","timestamp":"2024-08-03T11:03:08.762Z"}
+{"code":"SQLITE_ERROR","errno":1,"level":"error","message":"Failed to update user: mike SQLITE_ERROR: no such table: User","stack":"Error: SQLITE_ERROR: no such table: User","timestamp":"2024-08-03T11:13:12.442Z"}
+{"code":"SQLITE_ERROR","errno":1,"level":"error","message":"Failed to update user: mike SQLITE_ERROR: no such table: User","stack":"Error: SQLITE_ERROR: no such table: User","timestamp":"2024-08-03T11:13:33.398Z"}
+{"code":"SQLITE_ERROR","errno":1,"level":"error","message":"Error fetching user channels: SQLITE_ERROR: no such table: ChatMembers","stack":"Error: SQLITE_ERROR: no such table: ChatMembers","timestamp":"2024-08-03T12:31:44.609Z"}
+{"code":"SQLITE_ERROR","errno":1,"level":"error","message":"Error fetching user channels: SQLITE_ERROR: no such table: ChatMembers","stack":"Error: SQLITE_ERROR: no such table: ChatMembers","timestamp":"2024-08-03T12:32:21.626Z"}
+{"code":"SQLITE_ERROR","errno":1,"level":"error","message":"Error fetching user channels: SQLITE_ERROR: no such table: ChatMembers","stack":"Error: SQLITE_ERROR: no such table: ChatMembers","timestamp":"2024-08-03T12:34:10.610Z"}
+{"code":"SQLITE_ERROR","errno":1,"level":"error","message":"Error fetching user channels: SQLITE_ERROR: no such table: ChatMembers","stack":"Error: SQLITE_ERROR: no such table: ChatMembers","timestamp":"2024-08-03T12:34:20.622Z"}
+{"code":"SQLITE_ERROR","errno":1,"level":"error","message":"Error fetching user channels: SQLITE_ERROR: no such table: ChatMembers","stack":"Error: SQLITE_ERROR: no such table: ChatMembers","timestamp":"2024-08-03T12:35:27.626Z"}
+{"code":"SQLITE_ERROR","errno":1,"level":"error","message":"Error fetching user channels: SQLITE_ERROR: no such table: ChatMembers","stack":"Error: SQLITE_ERROR: no such table: ChatMembers","timestamp":"2024-08-03T12:36:53.889Z"}
+{"code":"SQLITE_ERROR","errno":1,"level":"error","message":"Failed to update user: mike SQLITE_ERROR: no such table: User","stack":"Error: SQLITE_ERROR: no such table: User","timestamp":"2024-08-03T12:38:37.173Z"}
+{"code":"SQLITE_ERROR","errno":1,"level":"error","message":"Failed to update user: mike SQLITE_ERROR: no such table: User","stack":"Error: SQLITE_ERROR: no such table: User","timestamp":"2024-08-03T12:51:19.534Z"}

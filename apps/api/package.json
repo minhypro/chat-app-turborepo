@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
+    "@repo/types": "*",
     "@types/express": "^4.17.21",
     "@types/node": "20.12.7",
     "@types/uuid": "^10.0.0",

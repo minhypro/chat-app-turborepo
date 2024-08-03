@@ -2,13 +2,13 @@ import { ChatDatabase } from '@/global.type';
 import { logger } from '@/utils';
 
 /**
- * Create Channels table in sqlite database. To store the channels
+ * Create Chats table in sqlite database. To store the conversations
  * @param db Database instance
  */
-export const createChannelTable = async (db: ChatDatabase): Promise<void> => {
+export const createChatsTable = async (db: ChatDatabase): Promise<void> => {
   try {
     await db.exec(`
-      CREATE TABLE IF NOT EXISTS Channels (
+      CREATE TABLE IF NOT EXISTS Chats (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         name TEXT,
         is_group BOOLEAN DEFAULT FALSE,
@@ -17,8 +17,8 @@ export const createChannelTable = async (db: ChatDatabase): Promise<void> => {
     );
     
       `);
-    logger.info('Table Channels created successfully');
+    logger.info('Table Chats created successfully');
   } catch (error) {
-    logger.error('Error creating Channels table:', error);
+    logger.error('Error creating Chats table:', error);
   }
 };

@@ -1,25 +1,23 @@
-import { ajv, channelRoom, getUsernameFromSocket } from '@/utils';
+import { ajv, channelRoom } from '@/utils';
 import { IEventListeners, TEventListenerCallback } from '../type';
-import { dbHelper } from '@/db';
-import { MessageDTO } from '@/db/message/type';
+import { Message, MessageDTO } from '@repo/types';
 
 interface ISendMessagePayload {
+  chat_id: number;
   content: string;
-  channelId: string;
 }
 
 const validate = ajv.compile<ISendMessagePayload>({
   type: 'object',
   properties: {
     content: { type: 'string', minLength: 1, maxLength: 5000 },
-    channelId: { type: 'string', format: 'uuid' },
+    chat_id: { type: 'integer' },
   },
-  required: ['content', 'channelId'],
+  required: ['content', 'chat_id'],
   additionalProperties: false,
 });
 
-export function sendMessage({ io, socket, db }: IEventListeners) {
-  const username = getUsernameFromSocket(socket);
+export function sendMessage({ socket, db }: IEventListeners) {
   return async (payload: ISendMessagePayload, callback: TEventListenerCallback) => {
     if (typeof callback !== 'function') {
       return;
@@ -33,22 +31,34 @@ export function sendMessage({ io, socket, db }: IEventListeners) {
     }
 
     const message: MessageDTO = {
-      sender_id: username,
-      channel_id: payload.channelId,
+      sender_id: socket.handshake.auth.userId,
+      chat_id: payload.chat_id,
       content: payload.content,
     };
 
     try {
-      const createdMessage = await dbHelper.messageDb.insertMessage(db, message);
+      const result = await db.run('INSERT INTO Messages (chat_id, sender_id, content) VALUES (?, ?, ?)', [
+        message.chat_id,
+        message.sender_id,
+        message.content,
+      ]);
+      const messageId = result.lastID;
+      const createdMessage = await db.get<Message>('SELECT * FROM Messages WHERE id = ?', [messageId]);
 
-      socket.broadcast.to(channelRoom(message.channel_id)).emit('message:sent', message);
+      if (createdMessage) {
+        socket.broadcast.to(channelRoom(createdMessage?.chat_id)).emit('message:sent', message);
 
-      callback({
-        status: 'OK',
-        data: {
-          message: createdMessage,
-        },
-      });
+        callback({
+          status: 'OK',
+          data: {
+            message: createdMessage,
+          },
+        });
+      } else {
+        return callback({
+          status: 'ERROR',
+        });
+      }
     } catch (_) {
       return callback({
         status: 'ERROR',

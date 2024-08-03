@@ -5,7 +5,7 @@ import { logger } from '@/utils';
  * Create User table in sqlite database. To store the users
  * @param db Database instance
  */
-export const createUserTable = async (db: ChatDatabase): Promise<void> => {
+export const createUsersTable = async (db: ChatDatabase): Promise<void> => {
   try {
     await db.exec(`
       CREATE TABLE IF NOT EXISTS Users (

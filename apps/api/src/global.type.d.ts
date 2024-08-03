@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { Database } from 'sqlite';
 import { sqlite3 } from 'sqlite3';
 

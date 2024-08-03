@@ -7,4 +7,4 @@ export interface IEventListeners {
   db: ChatDatabase;
 }
 
-export type TEventListenerCallback = (arg0: { status: string; errors?: any; data?: any }) => void;
+export type TEventListenerCallback = (_arg0: { status: string; errors?: any; data?: any }) => void;

@@ -79,10 +79,21 @@
       form.addEventListener('submit', e => {
         e.preventDefault();
         if (input.value) {
+          // Send message
+          // socket.emitWithAck('message:send', {
+          //   content: input.value,
+          //   channelId: 'b6d009aa-d2c5-4e59-a6de-a8cf076da378',
+          // });
+
+          // socket.emitWithAck('channel:create', {
+          //   name: input.value,
+          // });
+
           socket.emitWithAck('message:send', {
+            chat_id: 1,
             content: input.value,
-            channelId: 'b6d009aa-d2c5-4e59-a6de-a8cf076da378',
           });
+
           input.value = '';
         }
       });

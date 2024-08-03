@@ -1,15 +1,14 @@
-import { dbHelper } from '@/db';
 import { ChatDatabase } from '@/global.type';
+import { User } from '@repo/types';
 
 export const connect = async (db: ChatDatabase, name: string) => {
-  const foundUser = await dbHelper.userDb.findUserByName(db, name);
+  const foundUser = await db.get<User>(`SELECT * FROM Users WHERE name = ?`, [name]);
 
-  if (!foundUser) {
-    dbHelper.userDb.insertUser(db, name);
+  if (foundUser) {
+    await db.run('UPDATE Users SET is_online = TRUE, last_active = CURRENT_TIMESTAMP WHERE id = ?', [foundUser.id]);
+  } else {
+    await db.run('INSERT INTO Users (name) VALUES (?)', [name]);
   }
 
-  dbHelper.userDb.updateUser(db, name, {
-    is_online: true,
-    last_ping: new Date().toISOString(),
-  });
+  return foundUser?.id;
 };

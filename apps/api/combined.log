@@ -98,3 +98,622 @@ info: Table Channel created successfully
 info: Table Messages created successfully
 info: Table User created successfully
 info: Table UserChannel created successfully
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+undefined error: Error creating Channels table: Cannot read properties of undefined (reading 'split') (utils.ts:17)
+undefined error: Error creating Messages table: Cannot read properties of undefined (reading 'split') (utils.ts:17)
+undefined error: Error creating User table: Cannot read properties of undefined (reading 'split') (utils.ts:17)
+undefined error: Error creating ChannelMembers table: Cannot read properties of undefined (reading 'split') (utils.ts:17)
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+error: Error inserting user: SQLITE_ERROR: table Users has no column named last_ping {"code":"SQLITE_ERROR","errno":1,"stack":"Error: SQLITE_ERROR: table Users has no column named last_ping"}
+error: Failed to update user: mike SQLITE_ERROR: no such table: User {"code":"SQLITE_ERROR","errno":1,"stack":"Error: SQLITE_ERROR: no such table: User"}
+error: Error fetching user channels: SQLITE_ERROR: no such column: ChannelMembers.channel_id {"code":"SQLITE_ERROR","errno":1,"stack":"Error: SQLITE_ERROR: no such column: ChannelMembers.channel_id"}
+error: Failed to update user: mike SQLITE_ERROR: no such table: User {"code":"SQLITE_ERROR","errno":1,"stack":"Error: SQLITE_ERROR: no such table: User"}
+error: Error inserting user: SQLITE_ERROR: table Users has no column named last_ping {"code":"SQLITE_ERROR","errno":1,"stack":"Error: SQLITE_ERROR: table Users has no column named last_ping"}
+error: Failed to update user: mike SQLITE_ERROR: no such table: User {"code":"SQLITE_ERROR","errno":1,"stack":"Error: SQLITE_ERROR: no such table: User"}
+error: Error fetching user channels: SQLITE_ERROR: no such column: ChannelMembers.channel_id {"code":"SQLITE_ERROR","errno":1,"stack":"Error: SQLITE_ERROR: no such column: ChannelMembers.channel_id"}
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+error: Error inserting user: SQLITE_ERROR: table Users has no column named last_ping {"code":"SQLITE_ERROR","errno":1,"stack":"Error: SQLITE_ERROR: table Users has no column named last_ping"}
+error: Failed to update user: mike SQLITE_ERROR: no such table: User {"code":"SQLITE_ERROR","errno":1,"stack":"Error: SQLITE_ERROR: no such table: User"}
+error: Error fetching user channels: SQLITE_ERROR: no such column: ChannelMembers.channel_id {"code":"SQLITE_ERROR","errno":1,"stack":"Error: SQLITE_ERROR: no such column: ChannelMembers.channel_id"}
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+error: Error inserting user: SQLITE_ERROR: table Users has no column named last_ping {"code":"SQLITE_ERROR","errno":1,"stack":"Error: SQLITE_ERROR: table Users has no column named last_ping"}
+error: Failed to update user: mike SQLITE_ERROR: no such table: User {"code":"SQLITE_ERROR","errno":1,"stack":"Error: SQLITE_ERROR: no such table: User"}
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+error: Error fetching user channels: SQLITE_ERROR: no such table: ChatMembers {"code":"SQLITE_ERROR","errno":1,"stack":"Error: SQLITE_ERROR: no such table: ChatMembers"}
+info: User connected: {"0":"c","1":"h","2":"a","3":"n","4":"n","5":"e","6":"l","7":"s","8":":"}
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+error: Error fetching user channels: SQLITE_ERROR: no such column: ChannelMembers.name {"code":"SQLITE_ERROR","errno":1,"stack":"Error: SQLITE_ERROR: no such column: ChannelMembers.name"}
+info: User connected: {"0":"c","1":"h","2":"a","3":"n","4":"n","5":"e","6":"l","7":"s","8":":"}
+error: Failed to update user: mike SQLITE_ERROR: no such table: User {"code":"SQLITE_ERROR","errno":1,"stack":"Error: SQLITE_ERROR: no such table: User"}
+error: Error fetching user channels: SQLITE_ERROR: no such column: ChannelMembers.name {"code":"SQLITE_ERROR","errno":1,"stack":"Error: SQLITE_ERROR: no such column: ChannelMembers.name"}
+info: User connected: {"0":"c","1":"h","2":"a","3":"n","4":"n","5":"e","6":"l","7":"s","8":":"}
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+error: Error fetching user channels: SQLITE_ERROR: no such column: ChannelMembers.name {"code":"SQLITE_ERROR","errno":1,"stack":"Error: SQLITE_ERROR: no such column: ChannelMembers.name"}
+info: User connected: {"0":"c","1":"h","2":"a","3":"n","4":"n","5":"e","6":"l","7":"s","8":":"}
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+error: Error fetching user channels: SQLITE_ERROR: no such column: ChannelMembers.name {"code":"SQLITE_ERROR","errno":1,"stack":"Error: SQLITE_ERROR: no such column: ChannelMembers.name"}
+info: User connected: {"0":"c","1":"h","2":"a","3":"n","4":"n","5":"e","6":"l","7":"s","8":":"}
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+info: User connected: {"0":"c","1":"h","2":"a","3":"n","4":"n","5":"e","6":"l","7":"s","8":":"}
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+info: User connected: {"0":"c","1":"h","2":"a","3":"n","4":"n","5":"e","6":"l","7":"s","8":":"}
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+info: User connected: {"0":"c","1":"h","2":"a","3":"n","4":"n","5":"e","6":"l","7":"s","8":":"}
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+info: User connected: ? /n channels: ? {"0":"m","1":"i","2":"k","3":"e"}
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+info: User connected: [mike] /n channels: [[]]
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+info: User connected: mike channels: []
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+info: User connected
+info: User connected: mike channels: []
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+info: User connected &s {"0":"m","1":"i","2":"k","3":"e"}
+info: User connected: mike channels: []
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+info: User connected &s {"0":"m","1":"i","2":"k","3":"e"}
+info: User connected: mike channels: []
+{"level":"info","message":"Table Channels created successfully"}
+{"level":"info","message":"Table Messages created successfully"}
+{"level":"info","message":"Table User created successfully"}
+{"level":"info","message":"Table ChannelMembers created successfully"}
+{"level":"info","message":"Server running at http://localhost:4000"}
+{"level":"info","message":"User connected &s"}
+{"level":"info","message":"User connected: %s channels: %s"}
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+info: User connected &s {"0":"m","1":"i","2":"k","3":"e"}
+info: User connected: mike channels: []
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+info: User connected &s {"0":"m","1":"i","2":"k","3":"e"}
+info: User connected: mike channels: []
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+info: User connected &s {"0":"m","1":"i","2":"k","3":"e"}
+info: User connected: mike channels: []
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+info: User connected &s {"0":"m","1":"i","2":"k","3":"e"}
+info: User connected: mike channels: []
+{"level":"info","message":"Table Channels created successfully"}
+{"level":"info","message":"Table Messages created successfully"}
+{"level":"info","message":"Table User created successfully"}
+{"level":"info","message":"Table ChannelMembers created successfully"}
+{"level":"info","message":"Server running at http://localhost:4000"}
+{"level":"info","message":"User connected &s"}
+{"level":"info","message":"User connected: %s channels: %s"}
+{"level":"info","message":"Table Channels created successfully"}
+{"level":"info","message":"Table Messages created successfully"}
+{"level":"info","message":"Table User created successfully"}
+{"level":"info","message":"Table ChannelMembers created successfully"}
+{"level":"info","message":"Server running at http://localhost:4000"}
+{"level":"info","message":"User connected %s"}
+{"level":"info","message":"User connected: %s channels: %s"}
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+info: User connected mike
+info: User connected: mike channels: []
+info: Table Channels created successfully
+info: Table Messages created successfully
+info: Table User created successfully
+info: Table ChannelMembers created successfully
+info: Server running at http://localhost:4000
+info: User connected mike
+info: User connected: mike channels: []
+{"level":"info","message":"Table Channels created successfully","timestamp":"2024-08-03T11:01:58.277Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T11:01:58.279Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T11:01:58.279Z"}
+{"level":"info","message":"Table ChannelMembers created successfully","timestamp":"2024-08-03T11:01:58.280Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T11:01:58.281Z"}
+{"level":"info","message":"User connected mike","timestamp":"2024-08-03T11:01:59.620Z"}
+{"level":"info","message":"User connected: mike channels: []","timestamp":"2024-08-03T11:01:59.621Z"}
+{"level":"info","message":"Table Channels created successfully","timestamp":"2024-08-03T11:02:20.813Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T11:02:20.815Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T11:02:20.816Z"}
+{"level":"info","message":"Table ChannelMembers created successfully","timestamp":"2024-08-03T11:02:20.816Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T11:02:20.817Z"}
+{"level":"info","message":"User connected mike","timestamp":"2024-08-03T11:02:21.621Z"}
+{"level":"info","message":"User connected: mike channels: []","timestamp":"2024-08-03T11:02:21.621Z"}
+{"code":"SQLITE_ERROR","errno":1,"level":"error","message":"Failed to update user: mike SQLITE_ERROR: no such table: User","stack":"Error: SQLITE_ERROR: no such table: User","timestamp":"2024-08-03T11:02:38.325Z"}
+{"level":"info","message":"User connected mike","timestamp":"2024-08-03T11:02:38.496Z"}
+{"level":"info","message":"User connected: mike channels: []","timestamp":"2024-08-03T11:02:38.497Z"}
+{"level":"info","message":"public channel [1] was created by user [mike]","timestamp":"2024-08-03T11:02:47.709Z"}
+{"code":"SQLITE_ERROR","errno":1,"level":"error","message":"Failed to update user: mike SQLITE_ERROR: no such table: User","stack":"Error: SQLITE_ERROR: no such table: User","timestamp":"2024-08-03T11:03:08.762Z"}
+{"level":"info","message":"User connected mike","timestamp":"2024-08-03T11:03:08.955Z"}
+{"level":"info","message":"User connected: mike channels: []","timestamp":"2024-08-03T11:03:08.956Z"}
+{"level":"info","message":"Table Channels created successfully","timestamp":"2024-08-03T11:04:17.095Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T11:04:17.097Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T11:04:17.097Z"}
+{"level":"info","message":"Table ChannelMembers created successfully","timestamp":"2024-08-03T11:04:17.098Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T11:04:17.099Z"}
+{"level":"info","message":"User connected mike","timestamp":"2024-08-03T11:04:17.575Z"}
+{"level":"info","message":"User connected: mike channels: []","timestamp":"2024-08-03T11:04:17.576Z"}
+{"level":"info","message":"Table Channels created successfully","timestamp":"2024-08-03T11:11:43.131Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T11:11:43.133Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T11:11:43.134Z"}
+{"level":"info","message":"Table ChannelMembers created successfully","timestamp":"2024-08-03T11:11:43.134Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T11:11:43.135Z"}
+{"level":"info","message":"User connected mike","timestamp":"2024-08-03T11:11:44.620Z"}
+{"level":"info","message":"User connected: mike channels: []","timestamp":"2024-08-03T11:11:44.620Z"}
+{"level":"info","message":"Table Channels created successfully","timestamp":"2024-08-03T11:12:43.289Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T11:12:43.291Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T11:12:43.291Z"}
+{"level":"info","message":"Table ChannelMembers created successfully","timestamp":"2024-08-03T11:12:43.291Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T11:12:43.293Z"}
+{"level":"info","message":"User connected mike","timestamp":"2024-08-03T11:12:43.619Z"}
+{"level":"info","message":"User connected: mike channels: []","timestamp":"2024-08-03T11:12:43.620Z"}
+{"code":"SQLITE_ERROR","errno":1,"level":"error","message":"Failed to update user: mike SQLITE_ERROR: no such table: User","stack":"Error: SQLITE_ERROR: no such table: User","timestamp":"2024-08-03T11:13:12.442Z"}
+{"level":"info","message":"User connected mike","timestamp":"2024-08-03T11:13:12.614Z"}
+{"level":"info","message":"User connected: mike channels: []","timestamp":"2024-08-03T11:13:12.614Z"}
+{"level":"info","message":"public channel [2] was created by user [mike]","timestamp":"2024-08-03T11:13:17.306Z"}
+{"code":"SQLITE_ERROR","errno":1,"level":"error","message":"Failed to update user: mike SQLITE_ERROR: no such table: User","stack":"Error: SQLITE_ERROR: no such table: User","timestamp":"2024-08-03T11:13:33.398Z"}
+{"level":"info","message":"User connected mike","timestamp":"2024-08-03T11:13:33.618Z"}
+{"level":"info","message":"User connected: mike channels: [ [Object] ]","timestamp":"2024-08-03T11:13:33.618Z"}
+{"level":"info","message":"Table Channels created successfully","timestamp":"2024-08-03T12:02:49.464Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T12:02:49.466Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T12:02:49.467Z"}
+{"level":"info","message":"Table ChannelMembers created successfully","timestamp":"2024-08-03T12:02:49.467Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T12:02:49.468Z"}
+{"level":"info","message":"User connected: mike channels: [{\"id\":2,\"name\":\"333\",\"is_group\":1,\"created_at\":\"2024-08-03 11:13:17\",\"updated_at\":\"2024-08-03 11:13:17\"}]","timestamp":"2024-08-03T12:02:50.621Z"}
+{"level":"info","message":"Table Channels created successfully","timestamp":"2024-08-03T12:19:06.827Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T12:19:06.829Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T12:19:06.829Z"}
+{"level":"info","message":"Table ChannelMembers created successfully","timestamp":"2024-08-03T12:19:06.830Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T12:19:06.831Z"}
+{"level":"info","message":"User connected: mike channels: [{\"id\":2,\"name\":\"333\",\"is_group\":1,\"created_at\":\"2024-08-03 11:13:17\",\"updated_at\":\"2024-08-03 11:13:17\"}]","timestamp":"2024-08-03T12:19:06.900Z"}
+{"level":"info","message":"Table Channels created successfully","timestamp":"2024-08-03T12:21:26.324Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T12:21:26.326Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T12:21:26.327Z"}
+{"level":"info","message":"Table ChannelMembers created successfully","timestamp":"2024-08-03T12:21:26.327Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T12:21:26.329Z"}
+{"level":"info","message":"User connected: mike channels: [{\"id\":2,\"name\":\"333\",\"is_group\":1,\"created_at\":\"2024-08-03 11:13:17\",\"updated_at\":\"2024-08-03 11:13:17\"}]","timestamp":"2024-08-03T12:21:26.961Z"}
+{"level":"info","message":"Table Channels created successfully","timestamp":"2024-08-03T12:29:01.787Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T12:29:01.788Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T12:29:01.789Z"}
+{"level":"info","message":"Table ChannelMembers created successfully","timestamp":"2024-08-03T12:29:01.789Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T12:29:01.791Z"}
+{"level":"info","message":"User connected: mike channels: [{\"id\":2,\"name\":\"333\",\"is_group\":1,\"created_at\":\"2024-08-03 11:13:17\",\"updated_at\":\"2024-08-03 11:13:17\"}]","timestamp":"2024-08-03T12:29:01.901Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T12:29:35.185Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T12:29:35.190Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T12:29:35.191Z"}
+{"level":"info","message":"Table ChannelMembers created successfully","timestamp":"2024-08-03T12:29:35.192Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T12:29:35.196Z"}
+{"level":"info","message":"User connected: mike channels: [{\"id\":2,\"name\":\"333\",\"is_group\":1,\"created_at\":\"2024-08-03 11:13:17\",\"updated_at\":\"2024-08-03 11:13:17\"}]","timestamp":"2024-08-03T12:29:35.625Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T12:30:56.434Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T12:30:56.436Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T12:30:56.437Z"}
+{"level":"info","message":"Table ChannelMembers created successfully","timestamp":"2024-08-03T12:30:56.439Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T12:30:56.442Z"}
+{"level":"info","message":"User connected: mike channels: [{\"id\":2,\"name\":\"333\",\"is_group\":1,\"created_at\":\"2024-08-03 11:13:17\",\"updated_at\":\"2024-08-03 11:13:17\"}]","timestamp":"2024-08-03T12:30:56.470Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T12:31:43.469Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T12:31:43.471Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T12:31:43.471Z"}
+{"level":"info","message":"Table ChannelMembers created successfully","timestamp":"2024-08-03T12:31:43.471Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T12:31:43.473Z"}
+{"code":"SQLITE_ERROR","errno":1,"level":"error","message":"Error fetching user channels: SQLITE_ERROR: no such table: ChatMembers","stack":"Error: SQLITE_ERROR: no such table: ChatMembers","timestamp":"2024-08-03T12:31:44.609Z"}
+{"level":"info","message":"User connected: mike channels: undefined","timestamp":"2024-08-03T12:31:44.610Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T12:32:20.367Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T12:32:20.369Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T12:32:20.369Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T12:32:20.370Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T12:32:20.372Z"}
+{"code":"SQLITE_ERROR","errno":1,"level":"error","message":"Error fetching user channels: SQLITE_ERROR: no such table: ChatMembers","stack":"Error: SQLITE_ERROR: no such table: ChatMembers","timestamp":"2024-08-03T12:32:21.626Z"}
+{"level":"info","message":"User connected: mike channels: undefined","timestamp":"2024-08-03T12:32:21.627Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T12:34:08.928Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T12:34:08.929Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T12:34:08.930Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T12:34:08.930Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T12:34:08.931Z"}
+{"code":"SQLITE_ERROR","errno":1,"level":"error","message":"Error fetching user channels: SQLITE_ERROR: no such table: ChatMembers","stack":"Error: SQLITE_ERROR: no such table: ChatMembers","timestamp":"2024-08-03T12:34:10.610Z"}
+{"level":"info","message":"User connected: mike channels: undefined","timestamp":"2024-08-03T12:34:10.611Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T12:34:19.669Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T12:34:19.671Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T12:34:19.672Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T12:34:19.673Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T12:34:19.675Z"}
+{"code":"SQLITE_ERROR","errno":1,"level":"error","message":"Error fetching user channels: SQLITE_ERROR: no such table: ChatMembers","stack":"Error: SQLITE_ERROR: no such table: ChatMembers","timestamp":"2024-08-03T12:34:20.622Z"}
+{"level":"info","message":"User connected: mike channels: undefined","timestamp":"2024-08-03T12:34:20.622Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T12:35:26.175Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T12:35:26.176Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T12:35:26.177Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T12:35:26.177Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T12:35:26.179Z"}
+{"code":"SQLITE_ERROR","errno":1,"level":"error","message":"Error fetching user channels: SQLITE_ERROR: no such table: ChatMembers","stack":"Error: SQLITE_ERROR: no such table: ChatMembers","timestamp":"2024-08-03T12:35:27.626Z"}
+{"level":"info","message":"User connected: mike channels: undefined","timestamp":"2024-08-03T12:35:27.626Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T12:36:53.604Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T12:36:53.608Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T12:36:53.611Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T12:36:53.614Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T12:36:53.616Z"}
+{"code":"SQLITE_ERROR","errno":1,"level":"error","message":"Error fetching user channels: SQLITE_ERROR: no such table: ChatMembers","stack":"Error: SQLITE_ERROR: no such table: ChatMembers","timestamp":"2024-08-03T12:36:53.889Z"}
+{"level":"info","message":"User connected: mike channels: undefined","timestamp":"2024-08-03T12:36:53.890Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T12:37:34.182Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T12:37:34.184Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T12:37:34.185Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T12:37:34.185Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T12:37:34.186Z"}
+{"level":"info","message":"User connected: mike channels: []","timestamp":"2024-08-03T12:37:35.626Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T12:37:57.224Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T12:37:57.227Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T12:37:57.228Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T12:37:57.228Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T12:37:57.231Z"}
+{"level":"info","message":"User connected: mike channels: []","timestamp":"2024-08-03T12:37:57.634Z"}
+{"code":"SQLITE_ERROR","errno":1,"level":"error","message":"Failed to update user: mike SQLITE_ERROR: no such table: User","stack":"Error: SQLITE_ERROR: no such table: User","timestamp":"2024-08-03T12:38:37.173Z"}
+{"level":"info","message":"User connected: mike channels: []","timestamp":"2024-08-03T12:38:37.476Z"}
+{"level":"info","message":"public channel [1] was created by user [mike]","timestamp":"2024-08-03T12:38:44.518Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T12:40:05.485Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T12:40:05.487Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T12:40:05.488Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T12:40:05.489Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T12:40:05.493Z"}
+{"level":"info","message":"User connected: mike channels: [{\"id\":1,\"name\":\"New chat\",\"is_group\":1,\"created_at\":\"2024-08-03 12:38:44\",\"updated_at\":\"2024-08-03 12:38:44\"}]","timestamp":"2024-08-03T12:40:05.847Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T12:42:54.647Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T12:42:54.650Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T12:42:54.650Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T12:42:54.651Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T12:42:54.653Z"}
+{"level":"info","message":"User connected: mike channels: [{\"id\":1,\"name\":\"New chat\",\"is_group\":1,\"created_at\":\"2024-08-03 12:38:44\",\"updated_at\":\"2024-08-03 12:38:44\"}]","timestamp":"2024-08-03T12:42:55.190Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T12:48:19.297Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T12:48:19.300Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T12:48:19.301Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T12:48:19.302Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T12:48:19.304Z"}
+{"level":"info","message":"User connected: mike channels: [{\"id\":1,\"name\":\"New chat\",\"is_group\":1,\"created_at\":\"2024-08-03 12:38:44\",\"updated_at\":\"2024-08-03 12:38:44\"}]","timestamp":"2024-08-03T12:48:19.653Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T12:50:17.995Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T12:50:17.999Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T12:50:18.000Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T12:50:18.001Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T12:50:18.004Z"}
+{"level":"info","message":"User connected: mike channels: [{\"id\":1,\"name\":\"New chat\",\"is_group\":1,\"created_at\":\"2024-08-03 12:38:44\",\"updated_at\":\"2024-08-03 12:38:44\"}]","timestamp":"2024-08-03T12:50:18.224Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T12:51:12.860Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T12:51:12.866Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T12:51:12.867Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T12:51:12.868Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T12:51:12.873Z"}
+{"level":"info","message":"User connected: mike channels: [{\"id\":1,\"name\":\"New chat\",\"is_group\":1,\"created_at\":\"2024-08-03 12:38:44\",\"updated_at\":\"2024-08-03 12:38:44\"}]","timestamp":"2024-08-03T12:51:13.037Z"}
+{"code":"SQLITE_ERROR","errno":1,"level":"error","message":"Failed to update user: mike SQLITE_ERROR: no such table: User","stack":"Error: SQLITE_ERROR: no such table: User","timestamp":"2024-08-03T12:51:19.534Z"}
+{"level":"info","message":"User connected: mike channels: [{\"id\":1,\"name\":\"New chat\",\"is_group\":1,\"created_at\":\"2024-08-03 12:38:44\",\"updated_at\":\"2024-08-03 12:38:44\"}]","timestamp":"2024-08-03T12:51:19.747Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T12:53:39.508Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T12:53:39.511Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T12:53:39.511Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T12:53:39.512Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T12:53:39.514Z"}
+{"level":"info","message":"User connected: mike channels: [{\"id\":1,\"name\":\"New chat\",\"is_group\":1,\"created_at\":\"2024-08-03 12:38:44\",\"updated_at\":\"2024-08-03 12:38:44\"}]","timestamp":"2024-08-03T12:53:40.459Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T12:55:19.179Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T12:55:19.181Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T12:55:19.182Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T12:55:19.182Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T12:55:19.184Z"}
+{"level":"info","message":"User connected: mike channels: [{\"id\":1,\"name\":\"New chat\",\"is_group\":1,\"created_at\":\"2024-08-03 12:38:44\",\"updated_at\":\"2024-08-03 12:38:44\"}]","timestamp":"2024-08-03T12:55:22.233Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T13:14:31.831Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T13:14:31.833Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T13:14:31.833Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T13:14:31.833Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T13:14:31.835Z"}
+{"level":"info","message":"User connected: mike channels: [{\"id\":1,\"name\":\"New chat\",\"is_group\":1,\"created_at\":\"2024-08-03 12:38:44\",\"updated_at\":\"2024-08-03 12:38:44\"}]","timestamp":"2024-08-03T13:14:32.863Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T13:14:58.104Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T13:14:58.107Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T13:14:58.108Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T13:14:58.109Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T13:14:58.111Z"}
+{"level":"info","message":"User connected: mike chats: [{\"id\":1,\"name\":\"New chat\",\"is_group\":1,\"created_at\":\"2024-08-03 12:38:44\",\"updated_at\":\"2024-08-03 12:38:44\"}]","timestamp":"2024-08-03T13:14:58.267Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T13:20:35.795Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T13:20:35.798Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T13:20:35.798Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T13:20:35.799Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T13:20:35.801Z"}
+{"level":"info","message":"User connected: mike chats: [{\"id\":1,\"name\":\"New chat\",\"is_group\":1,\"created_at\":\"2024-08-03 12:38:44\",\"updated_at\":\"2024-08-03 12:38:44\"}]","timestamp":"2024-08-03T13:20:36.430Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T13:21:27.058Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T13:21:27.060Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T13:21:27.060Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T13:21:27.060Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T13:21:27.062Z"}
+{"level":"info","message":"User connected: mike chats: [{\"id\":1,\"name\":\"New chat\",\"is_group\":1,\"created_at\":\"2024-08-03 12:38:44\",\"updated_at\":\"2024-08-03 12:38:44\"}]","timestamp":"2024-08-03T13:21:27.563Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T13:21:37.023Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T13:21:37.025Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T13:21:37.026Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T13:21:37.026Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T13:21:37.028Z"}
+{"level":"info","message":"User connected: mike chats: [{\"id\":1,\"name\":\"New chat\",\"is_group\":1,\"created_at\":\"2024-08-03 12:38:44\",\"updated_at\":\"2024-08-03 12:38:44\"}]","timestamp":"2024-08-03T13:21:37.377Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T13:22:21.368Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T13:22:21.372Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T13:22:21.373Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T13:22:21.374Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T13:22:21.377Z"}
+{"level":"info","message":"User connected: mike chats: [{\"id\":1,\"name\":\"New chat\",\"is_group\":1,\"created_at\":\"2024-08-03 12:38:44\",\"updated_at\":\"2024-08-03 12:38:44\"}]","timestamp":"2024-08-03T13:22:21.478Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T13:22:50.825Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T13:22:50.827Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T13:22:50.828Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T13:22:50.828Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T13:22:50.830Z"}
+{"level":"info","message":"User connected: mike chats: [{\"id\":1,\"name\":\"New chat\",\"is_group\":1,\"created_at\":\"2024-08-03 12:38:44\",\"updated_at\":\"2024-08-03 12:38:44\"}]","timestamp":"2024-08-03T13:22:51.232Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T13:23:54.813Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T13:23:54.815Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T13:23:54.816Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T13:23:54.816Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T13:23:54.818Z"}
+{"level":"info","message":"User connected: mike chats: [{\"id\":1,\"name\":\"New chat\",\"is_group\":1,\"created_at\":\"2024-08-03 12:38:44\",\"updated_at\":\"2024-08-03 12:38:44\"}]","timestamp":"2024-08-03T13:23:55.073Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T13:25:09.976Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T13:25:09.979Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T13:25:09.980Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T13:25:09.980Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T13:25:09.982Z"}
+{"level":"info","message":"User connected: mike chats: [{\"id\":1}]","timestamp":"2024-08-03T13:25:14.286Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T13:25:23.945Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T13:25:23.949Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T13:25:23.949Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T13:25:23.950Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T13:25:23.953Z"}
+{"level":"info","message":"User connected: mike chats: [{\"id\":1}]","timestamp":"2024-08-03T13:25:24.878Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T13:26:01.452Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T13:26:01.455Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T13:26:01.457Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T13:26:01.459Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T13:26:01.461Z"}
+{"level":"info","message":"User connected: mike chats: [{\"id\":1}]","timestamp":"2024-08-03T13:26:01.624Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T13:27:06.582Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T13:27:06.584Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T13:27:06.584Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T13:27:06.585Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T13:27:06.586Z"}
+{"level":"info","message":"User connected: mike chats: [{\"id\":1}]","timestamp":"2024-08-03T13:27:07.024Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T13:28:23.160Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T13:28:23.163Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T13:28:23.163Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T13:28:23.163Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T13:28:23.165Z"}
+{"level":"info","message":"User connected: mike chats: [{\"id\":1,\"name\":\"New chat\",\"is_group\":1,\"created_at\":\"2024-08-03 12:38:44\",\"updated_at\":\"2024-08-03 12:38:44\"}]","timestamp":"2024-08-03T13:28:24.024Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T13:28:51.239Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T13:28:51.241Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T13:28:51.242Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T13:28:51.242Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T13:28:51.244Z"}
+{"level":"info","message":"User connected: mike chats: [{\"id\":1,\"name\":\"New chat\",\"is_group\":1,\"created_at\":\"2024-08-03 12:38:44\",\"updated_at\":\"2024-08-03 12:38:44\"}]","timestamp":"2024-08-03T13:28:51.730Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T13:32:31.780Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T13:32:31.782Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T13:32:31.783Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T13:32:31.783Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T13:32:31.785Z"}
+{"level":"info","message":"User connected: mike chats: [{\"id\":1,\"name\":\"New chat\",\"is_group\":1,\"created_at\":\"2024-08-03 12:38:44\",\"updated_at\":\"2024-08-03 12:38:44\"}]","timestamp":"2024-08-03T13:32:32.077Z"}
+{"level":"info","message":"User connected: mike chats: [{\"id\":1,\"name\":\"New chat\",\"is_group\":1,\"created_at\":\"2024-08-03 12:38:44\",\"updated_at\":\"2024-08-03 12:38:44\"}]","timestamp":"2024-08-03T13:35:23.043Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T13:38:17.177Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T13:38:17.179Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T13:38:17.180Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T13:38:17.180Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T13:38:17.181Z"}
+{"level":"info","message":"User connected: mike chats: [{\"id\":1,\"name\":\"New chat\",\"is_group\":1,\"created_at\":\"2024-08-03 12:38:44\",\"updated_at\":\"2024-08-03 12:38:44\"}]","timestamp":"2024-08-03T13:38:17.593Z"}
+{"level":"info","message":"User connected: mike chats: [{\"id\":1,\"name\":\"New chat\",\"is_group\":1,\"created_at\":\"2024-08-03 12:38:44\",\"updated_at\":\"2024-08-03 12:38:44\"}]","timestamp":"2024-08-03T13:38:27.300Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T13:39:01.957Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T13:39:01.959Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T13:39:01.959Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T13:39:01.960Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T13:39:01.962Z"}
+{"level":"info","message":"User connected: mike chats: [{\"id\":1,\"name\":\"New chat\",\"is_group\":1,\"created_at\":\"2024-08-03 12:38:44\",\"updated_at\":\"2024-08-03 12:38:44\"}]","timestamp":"2024-08-03T13:39:02.210Z"}
+{"level":"info","message":"User connected: mike chats: [{\"id\":1,\"name\":\"New chat\",\"is_group\":1,\"created_at\":\"2024-08-03 12:38:44\",\"updated_at\":\"2024-08-03 12:38:44\"}]","timestamp":"2024-08-03T13:39:03.976Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T13:41:11.326Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T13:41:11.329Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T13:41:11.330Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T13:41:11.331Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T13:41:11.333Z"}
+{"level":"info","message":"User connected: mike chats: [{\"id\":1,\"name\":\"New chat\",\"is_group\":1,\"created_at\":\"2024-08-03 12:38:44\",\"updated_at\":\"2024-08-03 12:38:44\"}]","timestamp":"2024-08-03T13:41:11.610Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T13:42:31.341Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T13:42:31.343Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T13:42:31.343Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T13:42:31.343Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T13:42:31.345Z"}
+{"level":"info","message":"User connected: mike chats: [{\"id\":1,\"name\":\"New chat\",\"is_group\":1,\"created_at\":\"2024-08-03 12:38:44\",\"updated_at\":\"2024-08-03 12:38:44\"}]","timestamp":"2024-08-03T13:42:31.731Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T13:42:44.445Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T13:42:44.449Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T13:42:44.449Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T13:42:44.450Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T13:42:44.453Z"}
+{"level":"info","message":"User connected: mike chats: [{\"id\":1,\"name\":\"New chat\",\"is_group\":1,\"created_at\":\"2024-08-03 12:38:44\",\"updated_at\":\"2024-08-03 12:38:44\"}]","timestamp":"2024-08-03T13:42:44.578Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-03T13:43:49.840Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-03T13:43:49.843Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-03T13:43:49.844Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-03T13:43:49.844Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-03T13:43:49.847Z"}
+{"level":"info","message":"User connected: mike chats: [{\"id\":1,\"name\":\"New chat\",\"is_group\":1,\"created_at\":\"2024-08-03 12:38:44\",\"updated_at\":\"2024-08-03 12:38:44\"}]","timestamp":"2024-08-03T13:43:50.027Z"}

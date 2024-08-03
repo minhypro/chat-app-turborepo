@@ -13,25 +13,26 @@ export { ajv };
 
 export const logger = createLogger({
   level: 'info',
-  format: format.combine(format.splat(), format.simple()),
+  format: format.combine(format.splat(), format.simple(), format.timestamp(), format.json()),
   transports: [
     new transports.File({ filename: 'error.log', level: 'error' }),
     new transports.File({ filename: 'combined.log' }),
   ],
 });
+
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new transports.Console());
 }
 
-export function channelRoom(channelId: string) {
+export function channelRoom(channelId: number) {
   return `channel:${channelId}`;
 }
 
-export function userRoom(userId: string) {
+export function userRoom(userId: number) {
   return `user:${userId}`;
 }
 
-export function userStateRoom(userId: string) {
+export function userStateRoom(userId: number) {
   return `user_state:${userId}`;
 }
 
