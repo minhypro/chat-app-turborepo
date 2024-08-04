@@ -1,5 +1,6 @@
-import { ajv } from '@/utils';
+import { ajv, logger, userRoom } from '@/utils';
 import { IEventListeners, TEventListenerCallback } from '../type';
+import { getChat } from './get';
 
 interface IJoinChatPayLoad {
   chatId: number;
@@ -14,7 +15,7 @@ const validate = ajv.compile<IJoinChatPayLoad>({
   additionalProperties: false,
 });
 
-export function listChats({ socket, db }: IEventListeners) {
+export function joinChat({ io, socket, db }: IEventListeners) {
   return async (payload: IJoinChatPayLoad, callback: TEventListenerCallback) => {
     if (typeof callback !== 'function') {
       return;
@@ -33,6 +34,16 @@ export function listChats({ socket, db }: IEventListeners) {
         socket.handshake.auth.userId,
       ]);
 
+      const userId = socket.handshake.auth.userId;
+
+      logger.info('user [%s] has joined chat [%s]', userId, payload.chatId);
+
+      const joinedChat = await getChat(db, payload.chatId);
+      // broadcast to the other tabs of the same user
+      socket.to(userRoom(userId)).emit('channel:joined', joinedChat);
+
+      io.in(userRoom(userId)).socketsJoin(`channel:${payload.chatId}`);
+
       return callback({
         status: 'OK',
         data: result.lastID,
@@ -40,7 +51,7 @@ export function listChats({ socket, db }: IEventListeners) {
     } catch (e) {
       return callback({
         status: 'ERROR',
-        errors: [{ message: 'failed to query' }],
+        errors: [{ message: 'failed to join' }],
       });
     }
   };

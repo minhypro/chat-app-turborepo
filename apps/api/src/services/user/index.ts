@@ -1,9 +1,4 @@
-import { connect } from './connect';
-import { disconnect } from './disconnect';
-import { fetchUserChats } from './fetch-user-chats';
-
-export const userServices = {
-  connect,
-  disconnect,
-  fetchUserChats,
-};
+export * from './connect';
+export * from './disconnect';
+export * from './fetch-user-chats';
+export * from './get';

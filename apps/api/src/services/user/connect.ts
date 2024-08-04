@@ -1,7 +1,7 @@
 import { ChatDatabase } from '@/global.type';
 import { User } from '@repo/types';
 
-export const connect = async (db: ChatDatabase, name: string) => {
+export const userConnect = async (db: ChatDatabase, name: string) => {
   const foundUser = await db.get<User>(`SELECT * FROM Users WHERE name = ?`, [name]);
 
   if (foundUser) {

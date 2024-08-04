@@ -8,10 +8,10 @@ import { EventName } from '@repo/types';
 import cors from 'cors';
 import { initDb } from './db';
 import { Config } from './config';
-import { userServices } from './services/user';
+import { userConnect, userDisconnect, fetchUserChats, getUser } from './services/user';
 import { ChatDatabase } from './global.type';
 import { channelRoom, getUsernameFromSocket, logger, userRoom } from './utils';
-import { channelServices } from './services/chat';
+import { createChat, joinChat, listChats } from './services/chat';
 import { messageServices } from './services/message';
 
 export async function createApp(httpServer: HttpServer, config: Config) {
@@ -45,11 +45,11 @@ const initEventHandlers = (io: SocketServer, db: ChatDatabase) => {
   io.use(async (socket, next) => {
     const username = getUsernameFromSocket(socket);
 
-    const userId = await userServices.connect(db, username);
+    const userId = await userConnect(db, username);
     socket.handshake.auth.userId = userId;
 
     try {
-      const chats = await userServices.fetchUserChats(db, userId!);
+      const chats = await fetchUserChats(db, userId!);
 
       logger.info('User connected: %s chats: %j', username, chats);
 
@@ -66,12 +66,12 @@ const initEventHandlers = (io: SocketServer, db: ChatDatabase) => {
   });
 
   io.on('connection', async (socket: Socket) => {
-    socket.on(EventName.CREATE_CHAT, channelServices.createChat({ io, socket, db }));
-    socket.on(EventName.LIST_CHAT, channelServices.listChats({ io, socket, db }));
-    // socket.on("channel:join", joinChannel({ io, socket, db }));
+    socket.on(EventName.CREATE_CHAT, createChat({ io, socket, db }));
+    socket.on(EventName.JOIN_CHAT, joinChat({ io, socket, db }));
+    socket.on(EventName.LIST_CHAT, listChats({ io, socket, db }));
     // socket.on("channel:search", searchChannels({ io, socket, db }));
 
-    // socket.on("user:get", getUser({ io, socket, db }));
+    socket.on('user:get', getUser({ io, socket, db }));
     // socket.on("user:reach", reachUser({ io, socket, db }));
     // socket.on("user:search", searchUsers({ io, socket, db }));
 
@@ -81,47 +81,8 @@ const initEventHandlers = (io: SocketServer, db: ChatDatabase) => {
     // socket.on("message:typing", typingMessage({ io, socket, db }));
 
     socket.on('disconnect', async () => {
-      await userServices.disconnect(db, socket.handshake.auth.userId);
+      await userDisconnect(db, socket.handshake.auth.userId);
     });
-
-    socket.on('clear chat', async () => {
-      try {
-        await db.run('DELETE FROM messages');
-      } catch (e) {
-        console.error('Failed to clear chat:', e);
-        return;
-      }
-      io.emit('chat cleared');
-    });
-
-    socket.on('chat message', async (msg: string) => {
-      console.log(msg);
-      // let result;
-      // try {
-      //   // Store the message in the database
-      //   result = await db.run("INSERT INTO messages (content) VALUES (?)", msg);
-      // } catch (e) {
-      //   console.error("Failed to store chat message:", e);
-      //   return;
-      // }
-      // // Include the offset with the message
-      // io.to(userRoom(username)).emit('chat message', msg, '123');
-    });
-
-    if (!socket.recovered) {
-      // If the connection state recovery was not successful
-      // try {
-      //   await db.each(
-      //     "SELECT id, content FROM messages WHERE id > ?",
-      //     [socket.handshake.auth.serverOffset || 0],
-      //     (_err: Error | null, row: { id: number; content: string }) => {
-      //       socket.emit("chat message", row.content, row.id);
-      //     }
-      //   );
-      // } catch (e) {
-      //   console.error("Failed to recover messages:", e);
-      // }
-    }
   });
 };
 

@@ -1,7 +1,4 @@
-import { createChat } from './create';
-import { listChats } from './list';
-
-export const channelServices = {
-  createChat,
-  listChats,
-};
+export * from './create';
+export * from './join';
+export * from './list';
+export * from './get';
