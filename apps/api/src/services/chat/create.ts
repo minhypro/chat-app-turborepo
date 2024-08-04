@@ -70,7 +70,10 @@ export function createChat({ io, socket, db }: IEventListeners) {
 
 export const insertChat = async (db: ChatDatabase, name: string, isPublic: boolean) => {
   try {
-    const result = await db.run('INSERT INTO Chats (name, is_public) VALUES (?, ?)', [name, isPublic]);
+    const result = await db.run('INSERT INTO Chats (name, is_public) VALUES (?, ?)', [
+      name,
+      isPublic,
+    ]);
     logger.info('chat inserted', result);
     return result.lastID;
   } catch (error) {

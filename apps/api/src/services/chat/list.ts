@@ -36,11 +36,10 @@ export function listChats({ db }: IEventListeners) {
       const searchPattern = `%${payload.query}%`;
 
       const chats = searchPattern
-        ? await db.all<Chat[]>('SELECT * FROM Chats WHERE is_public = TRUE AND name LIKE ? LIMIT ? OFFSET ?', [
-            searchPattern,
-            payload.limit,
-            payload.offset,
-          ])
+        ? await db.all<Chat[]>(
+            'SELECT * FROM Chats WHERE is_public = TRUE AND name LIKE ? LIMIT ? OFFSET ?',
+            [searchPattern, payload.limit, payload.offset],
+          )
         : await db.all<Chat[]>('SELECT * FROM Chats WHERE is_public = TRUE LIMIT ? OFFSET ?', [
             payload.limit,
             payload.offset,

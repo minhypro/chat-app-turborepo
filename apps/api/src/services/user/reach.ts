@@ -48,7 +48,10 @@ export function reachUser({ io, socket, db }: IEventListeners) {
         const memberIds = [...payload.memberIds, userId];
 
         memberIds.forEach(async memberId => {
-          await db.run('INSERT INTO ChatsMembers (chat_id, user_id) VALUES (?, ?)', [createdChatId, memberId]);
+          await db.run('INSERT INTO ChatsMembers (chat_id, user_id) VALUES (?, ?)', [
+            createdChatId,
+            memberId,
+          ]);
           // broadcast to other tabs of the same user
           socket.to(userRoom(memberId)).emit('chat:created', createdChat);
 

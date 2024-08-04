@@ -1,6 +1,9 @@
 import { ChatDatabase } from '@/global.type';
 
-export async function doInTransaction(db: ChatDatabase, callback: (_db: ChatDatabase) => Promise<any>) {
+export async function doInTransaction(
+  db: ChatDatabase,
+  callback: (_db: ChatDatabase) => Promise<any>,
+) {
   let output: any;
   try {
     await db.exec('BEGIN TRANSACTION');

@@ -37,13 +37,14 @@ export function sendMessage({ socket, db }: IEventListeners) {
     };
 
     try {
-      const result = await db.run('INSERT INTO Messages (chat_id, sender_id, content) VALUES (?, ?, ?)', [
-        message.chat_id,
-        message.sender_id,
-        message.content,
-      ]);
+      const result = await db.run(
+        'INSERT INTO Messages (chat_id, sender_id, content) VALUES (?, ?, ?)',
+        [message.chat_id, message.sender_id, message.content],
+      );
       const messageId = result.lastID;
-      const createdMessage = await db.get<Message>('SELECT * FROM Messages WHERE id = ?', [messageId]);
+      const createdMessage = await db.get<Message>('SELECT * FROM Messages WHERE id = ?', [
+        messageId,
+      ]);
 
       if (createdMessage) {
         socket.broadcast.to(channelRoom(createdMessage?.chat_id)).emit('message:sent', message);
