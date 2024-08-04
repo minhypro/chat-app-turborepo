@@ -1,13 +1,8 @@
 import { ajv } from '@/utils';
-import { IEventListeners, TEventListenerCallback } from '../type';
-import type { Chat } from '@repo/types';
+import { EventListeners, EventListenerCallback } from '../type';
+import { DEFAULT_LIMIT, type Chat, type SearchUserPayLoad } from '@repo/types';
 
-interface IQueryPayLoad {
-  query: string;
-  limit: number;
-}
-
-const validate = ajv.compile<IQueryPayLoad>({
+const validate = ajv.compile<SearchUserPayLoad>({
   type: 'object',
   properties: {
     query: { type: 'string' },
@@ -16,8 +11,8 @@ const validate = ajv.compile<IQueryPayLoad>({
   additionalProperties: false,
 });
 
-export function searchUsers({ db }: IEventListeners) {
-  return async (payload: IQueryPayLoad, callback: TEventListenerCallback) => {
+export function searchUsers({ db }: EventListeners) {
+  return async (payload: SearchUserPayLoad, callback: EventListenerCallback) => {
     if (typeof callback !== 'function') {
       return;
     }
@@ -35,9 +30,9 @@ export function searchUsers({ db }: IEventListeners) {
       const chats = searchPattern
         ? await db.all<Chat[]>('SELECT * FROM Users WHERE name LIKE ? LIMIT ?', [
             searchPattern,
-            payload.limit,
+            payload.limit ?? DEFAULT_LIMIT,
           ])
-        : await db.all<Chat[]>('SELECT * FROM Users LIMIT ?', [payload.limit]);
+        : await db.all<Chat[]>('SELECT * FROM Users LIMIT ?', [payload.limit ?? DEFAULT_LIMIT]);
 
       return callback({
         status: 'OK',

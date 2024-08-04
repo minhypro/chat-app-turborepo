@@ -1,13 +1,9 @@
+import type { Chat, CreateChannelPayload } from '@repo/types';
 import { ajv, getAuthFromSocket, logger, userRoom } from '@/utils';
-import { IEventListeners, TEventListenerCallback } from '../type';
-import type { Chat } from '@repo/types';
+import { EventListeners, EventListenerCallback } from '../type';
 import { ChatDatabase } from '@/global.type';
 
-interface ICreateChannelPayload {
-  name: string;
-}
-
-const validate = ajv.compile<ICreateChannelPayload>({
+const validate = ajv.compile<CreateChannelPayload>({
   type: 'object',
   properties: {
     name: { type: 'string', minLength: 2, maxLength: 32 },
@@ -17,9 +13,9 @@ const validate = ajv.compile<ICreateChannelPayload>({
   additionalProperties: false,
 });
 
-export function createChat({ io, socket, db }: IEventListeners) {
+export function createChat({ io, socket, db }: EventListeners) {
   const { username, userId } = getAuthFromSocket(socket);
-  return async (payload: ICreateChannelPayload, callback: TEventListenerCallback) => {
+  return async (payload: CreateChannelPayload, callback: EventListenerCallback) => {
     if (typeof callback !== 'function') {
       return;
     }

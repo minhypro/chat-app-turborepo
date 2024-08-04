@@ -3,9 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "main": "./dist",
-  "files": [
-    "./index.ts"
-  ],
+  "types": "src/index.ts",
   "scripts": {
     "build": "tsc"
   },

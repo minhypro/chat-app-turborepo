@@ -16,3 +16,6 @@ export enum EventName {
   ACK_MESSAGE = "message:ack",
   TYPING_MESSAGE = "message:typing",
 }
+
+export const DEFAULT_LIMIT = 20;
+export const DEFAULT_OFFSET = 0;

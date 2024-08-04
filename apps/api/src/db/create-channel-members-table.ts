@@ -13,6 +13,7 @@ export const createChatsMembersTable = async (db: ChatDatabase): Promise<void> =
         chat_id INTEGER NOT NULL,
         user_id INTEGER NOT NULL,
         read_to INTEGER DEFAULT 0,
+        read_at DATETIME,
         joined_at DATETIME DEFAULT CURRENT_TIMESTAMP,
         FOREIGN KEY(chat_id) REFERENCES Chats(id),
         FOREIGN KEY(user_id) REFERENCES Users(id)

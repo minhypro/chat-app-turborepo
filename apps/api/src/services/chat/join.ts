@@ -1,12 +1,9 @@
 import { ajv, getAuthFromSocket, logger, userRoom } from '@/utils';
-import { IEventListeners, TEventListenerCallback } from '../type';
+import { EventListeners, EventListenerCallback } from '../type';
 import { getChat } from './get';
+import { JoinChatPayLoad } from '@repo/types';
 
-interface IJoinChatPayLoad {
-  chatId: number;
-}
-
-const validate = ajv.compile<IJoinChatPayLoad>({
+const validate = ajv.compile<JoinChatPayLoad>({
   type: 'object',
   properties: {
     chatId: { type: 'number' },
@@ -15,8 +12,8 @@ const validate = ajv.compile<IJoinChatPayLoad>({
   additionalProperties: false,
 });
 
-export function joinChat({ io, socket, db }: IEventListeners) {
-  return async (payload: IJoinChatPayLoad, callback: TEventListenerCallback) => {
+export function joinChat({ io, socket, db }: EventListeners) {
+  return async (payload: JoinChatPayLoad, callback: EventListenerCallback) => {
     if (typeof callback !== 'function') {
       return;
     }

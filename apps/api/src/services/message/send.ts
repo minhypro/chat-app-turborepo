@@ -1,13 +1,8 @@
 import { ajv, channelRoom, getAuthFromSocket } from '@/utils';
-import { IEventListeners, TEventListenerCallback } from '../type';
-import { Message, MessageDTO } from '@repo/types';
+import { EventListeners, EventListenerCallback } from '../type';
+import { SendMessagePayload, Message, MessageDTO } from '@repo/types';
 
-interface ISendMessagePayload {
-  chat_id: number;
-  content: string;
-}
-
-const validate = ajv.compile<ISendMessagePayload>({
+const validate = ajv.compile<SendMessagePayload>({
   type: 'object',
   properties: {
     content: { type: 'string', minLength: 1, maxLength: 5000 },
@@ -17,8 +12,8 @@ const validate = ajv.compile<ISendMessagePayload>({
   additionalProperties: false,
 });
 
-export function sendMessage({ socket, db }: IEventListeners) {
-  return async (payload: ISendMessagePayload, callback: TEventListenerCallback) => {
+export function sendMessage({ socket, db }: EventListeners) {
+  return async (payload: SendMessagePayload, callback: EventListenerCallback) => {
     if (typeof callback !== 'function') {
       return;
     }

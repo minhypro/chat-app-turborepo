@@ -1,12 +1,8 @@
 import { ajv, getAuthFromSocket } from '@/utils';
-import { IEventListeners, TEventListenerCallback } from '../type';
+import { EventListeners, EventListenerCallback } from '../type';
+import { AckMessagePayload } from '@repo/types';
 
-interface ICreateChannelPayload {
-  chatId: number;
-  messageId: number;
-}
-
-const validate = ajv.compile<ICreateChannelPayload>({
+const validate = ajv.compile<AckMessagePayload>({
   type: 'object',
   properties: {
     chatId: { type: 'number' },
@@ -16,9 +12,9 @@ const validate = ajv.compile<ICreateChannelPayload>({
   additionalProperties: false,
 });
 
-export function ackMessage({ socket, db }: IEventListeners) {
+export function ackMessage({ socket, db }: EventListeners) {
   const { userId } = getAuthFromSocket(socket);
-  return async (payload: ICreateChannelPayload, callback: TEventListenerCallback) => {
+  return async (payload: AckMessagePayload, callback: EventListenerCallback) => {
     if (typeof callback !== 'function') {
       return;
     }

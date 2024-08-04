@@ -1,14 +1,8 @@
 import { ajv } from '@/utils';
-import { IEventListeners, TEventListenerCallback } from '../type';
-import type { Chat } from '@repo/types';
+import { EventListeners, EventListenerCallback } from '../type';
+import { DEFAULT_LIMIT, DEFAULT_OFFSET, type Chat, type ListChatPayLoad } from '@repo/types';
 
-interface IQueryPayLoad {
-  query: string;
-  limit: number;
-  offset: number;
-}
-
-const validate = ajv.compile<IQueryPayLoad>({
+const validate = ajv.compile<ListChatPayLoad>({
   type: 'object',
   properties: {
     query: { type: 'string' },
@@ -19,8 +13,8 @@ const validate = ajv.compile<IQueryPayLoad>({
   additionalProperties: false,
 });
 
-export function listChats({ db }: IEventListeners) {
-  return async (payload: IQueryPayLoad, callback: TEventListenerCallback) => {
+export function listChats({ db }: EventListeners) {
+  return async (payload: ListChatPayLoad, callback: EventListenerCallback) => {
     if (typeof callback !== 'function') {
       return;
     }
@@ -38,11 +32,11 @@ export function listChats({ db }: IEventListeners) {
       const chats = searchPattern
         ? await db.all<Chat[]>(
             'SELECT * FROM Chats WHERE is_public = TRUE AND name LIKE ? LIMIT ? OFFSET ?',
-            [searchPattern, payload.limit, payload.offset],
+            [searchPattern, payload.limit ?? DEFAULT_LIMIT, payload.offset ?? DEFAULT_OFFSET],
           )
         : await db.all<Chat[]>('SELECT * FROM Chats WHERE is_public = TRUE LIMIT ? OFFSET ?', [
-            payload.limit,
-            payload.offset,
+            payload.limit ?? DEFAULT_LIMIT,
+            payload.offset ?? DEFAULT_OFFSET,
           ]);
 
       return callback({

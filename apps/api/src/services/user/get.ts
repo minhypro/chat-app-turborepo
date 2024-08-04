@@ -1,12 +1,8 @@
 import { ajv, userStateRoom } from '@/utils';
-import { IEventListeners, TEventListenerCallback } from '../type';
-import type { User } from '@repo/types';
+import { EventListeners, EventListenerCallback } from '../type';
+import type { GetUserPayLoad, User } from '@repo/types';
 
-interface IPayLoad {
-  userId: number;
-}
-
-const validate = ajv.compile<IPayLoad>({
+const validate = ajv.compile<GetUserPayLoad>({
   type: 'object',
   properties: {
     userId: { type: 'number' },
@@ -15,8 +11,8 @@ const validate = ajv.compile<IPayLoad>({
   additionalProperties: false,
 });
 
-export function getUser({ socket, db }: IEventListeners) {
-  return async (payload: IPayLoad, callback: TEventListenerCallback) => {
+export function getUser({ socket, db }: EventListeners) {
+  return async (payload: GetUserPayLoad, callback: EventListenerCallback) => {
     if (typeof callback !== 'function') {
       return;
     }

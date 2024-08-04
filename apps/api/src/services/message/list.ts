@@ -1,13 +1,8 @@
 import { ajv, logger } from '@/utils';
-import { IEventListeners, TEventListenerCallback } from '../type';
+import { EventListeners, EventListenerCallback } from '../type';
+import { DEFAULT_LIMIT, DEFAULT_OFFSET, ListMessagesPayLoad } from '@repo/types';
 
-interface IQueryPayLoad {
-  chatId: number;
-  limit: number;
-  offset: number;
-}
-
-const validate = ajv.compile<IQueryPayLoad>({
+const validate = ajv.compile<ListMessagesPayLoad>({
   type: 'object',
   properties: {
     chatId: { type: 'number' },
@@ -17,8 +12,8 @@ const validate = ajv.compile<IQueryPayLoad>({
   additionalProperties: false,
 });
 
-export function listMessages({ db }: IEventListeners) {
-  return async (payload: IQueryPayLoad, callback: TEventListenerCallback) => {
+export function listMessages({ db }: EventListeners) {
+  return async (payload: ListMessagesPayLoad, callback: EventListenerCallback) => {
     if (typeof callback !== 'function') {
       return;
     }
@@ -33,7 +28,7 @@ export function listMessages({ db }: IEventListeners) {
     try {
       const messages = await db.all(
         'SELECT * FROM Messages WHERE chat_id = ? ORDER BY created_at ASC LIMIT ? OFFSET ?',
-        [payload.chatId, payload.limit, payload.offset],
+        [payload.query, payload.limit ?? DEFAULT_LIMIT, payload.offset ?? DEFAULT_OFFSET],
       );
 
       logger.info('messages: %j', messages);
