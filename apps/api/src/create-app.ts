@@ -10,11 +10,13 @@ import { initDb } from './db';
 import { Config } from './config';
 import { userConnect, userDisconnect, fetchUserChats, getUser } from './services/user';
 import { ChatDatabase } from './global.type';
-import { channelRoom, getUsernameFromSocket, logger, userRoom } from './utils';
+import { channelRoom, getAuthFromSocket, logger, userRoom } from './utils';
 import { createChat, joinChat, listChats } from './services/chat';
 import { sendMessage } from './services/message';
 import { reachUser } from './services/user/reach';
 import { listMessages } from './services/message/list';
+import { searchUsers } from './services/user/search';
+import { ackMessage } from './services/message/ack';
 
 export async function createApp(httpServer: HttpServer, config: Config) {
   const app = createExpressApp();
@@ -45,7 +47,7 @@ export { logger };
 
 const initEventHandlers = (io: SocketServer, db: ChatDatabase) => {
   io.use(async (socket, next) => {
-    const username = getUsernameFromSocket(socket);
+    const { username } = getAuthFromSocket(socket);
 
     const userId = await userConnect(db, username);
     socket.handshake.auth.userId = userId;
@@ -75,15 +77,16 @@ const initEventHandlers = (io: SocketServer, db: ChatDatabase) => {
 
     socket.on(EventName.GET_USER, getUser({ io, socket, db }));
     socket.on(EventName.REACH_USER, reachUser({ io, socket, db }));
-    // socket.on("user:search", searchUsers({ io, socket, db }));
+    socket.on(EventName.SEARCH_USER, searchUsers({ io, socket, db }));
 
     socket.on(EventName.SEND_MESSAGE, sendMessage({ io, socket, db }));
     socket.on(EventName.LIST_MESSAGE, listMessages({ io, socket, db }));
-    // socket.on("message:ack", ackMessage({ io, socket, db }));
+    socket.on(EventName.ACK_MESSAGE, ackMessage({ io, socket, db }));
     // socket.on("message:typing", typingMessage({ io, socket, db }));
 
     socket.on('disconnect', async () => {
-      await userDisconnect(db, socket.handshake.auth.userId);
+      const { userId } = getAuthFromSocket(socket);
+      await userDisconnect(db, userId);
     });
   });
 };

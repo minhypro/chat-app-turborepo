@@ -1,4 +1,4 @@
-import { ajv, getUsernameFromSocket, logger, userRoom } from '@/utils';
+import { ajv, getAuthFromSocket, logger, userRoom } from '@/utils';
 import { IEventListeners, TEventListenerCallback } from '../type';
 import type { Chat } from '@repo/types';
 import { insertChat } from '../chat';
@@ -24,7 +24,7 @@ const validate = ajv.compile<ICreateChannelPayload>({
 });
 
 export function reachUser({ io, socket, db }: IEventListeners) {
-  const username = getUsernameFromSocket(socket);
+  const { username, userId } = getAuthFromSocket(socket);
   return async (payload: ICreateChannelPayload, callback: TEventListenerCallback) => {
     if (typeof callback !== 'function') {
       return;
@@ -44,7 +44,6 @@ export function reachUser({ io, socket, db }: IEventListeners) {
       if (createdChat) {
         logger.info('public chat [%s] was created by user [%s]', createdChat.name, username);
 
-        const userId = socket.handshake.auth.userId as number;
         const memberIds = [...payload.memberIds, userId];
 
         memberIds.forEach(async memberId => {

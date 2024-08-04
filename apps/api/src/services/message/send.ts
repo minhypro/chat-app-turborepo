@@ -1,4 +1,4 @@
-import { ajv, channelRoom } from '@/utils';
+import { ajv, channelRoom, getAuthFromSocket } from '@/utils';
 import { IEventListeners, TEventListenerCallback } from '../type';
 import { Message, MessageDTO } from '@repo/types';
 
@@ -30,8 +30,10 @@ export function sendMessage({ socket, db }: IEventListeners) {
       });
     }
 
+    const { userId } = getAuthFromSocket(socket);
+
     const message: MessageDTO = {
-      sender_id: socket.handshake.auth.userId,
+      sender_id: userId,
       chat_id: payload.chat_id,
       content: payload.content,
     };

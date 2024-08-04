@@ -1,4 +1,4 @@
-import { ajv, logger, userRoom } from '@/utils';
+import { ajv, getAuthFromSocket, logger, userRoom } from '@/utils';
 import { IEventListeners, TEventListenerCallback } from '../type';
 import { getChat } from './get';
 
@@ -29,12 +29,11 @@ export function joinChat({ io, socket, db }: IEventListeners) {
     }
 
     try {
+      const { userId } = getAuthFromSocket(socket);
       const result = await db.run('INSERT INTO ChatMembers (chat_id, user_id) VALUES (?, ?)', [
         payload.chatId,
-        socket.handshake.auth.userId,
+        userId,
       ]);
-
-      const userId = socket.handshake.auth.userId;
 
       logger.info('user [%s] has joined chat [%s]', userId, payload.chatId);
 

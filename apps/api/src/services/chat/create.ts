@@ -1,4 +1,4 @@
-import { ajv, getUsernameFromSocket, logger, userRoom } from '@/utils';
+import { ajv, getAuthFromSocket, logger, userRoom } from '@/utils';
 import { IEventListeners, TEventListenerCallback } from '../type';
 import type { Chat } from '@repo/types';
 import { ChatDatabase } from '@/global.type';
@@ -18,7 +18,7 @@ const validate = ajv.compile<ICreateChannelPayload>({
 });
 
 export function createChat({ io, socket, db }: IEventListeners) {
-  const username = getUsernameFromSocket(socket);
+  const { username, userId } = getAuthFromSocket(socket);
   return async (payload: ICreateChannelPayload, callback: TEventListenerCallback) => {
     if (typeof callback !== 'function') {
       return;
@@ -40,10 +40,9 @@ export function createChat({ io, socket, db }: IEventListeners) {
 
         db.run('INSERT INTO ChatsMembers (chat_id, user_id) VALUES (?, ?)', [
           createdChatId,
-          socket.handshake.auth.userId,
+          userId,
         ]);
 
-        const userId = socket.handshake.auth.userId;
         // broadcast to other tabs of the same user
         socket.to(userRoom(userId)).emit('chat:created', createdChat);
 
