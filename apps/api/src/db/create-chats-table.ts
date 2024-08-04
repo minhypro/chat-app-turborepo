@@ -11,7 +11,7 @@ export const createChatsTable = async (db: ChatDatabase): Promise<void> => {
       CREATE TABLE IF NOT EXISTS Chats (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         name TEXT,
-        is_group BOOLEAN DEFAULT FALSE,
+        is_public BOOLEAN DEFAULT FALSE,
         created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
         updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
     );

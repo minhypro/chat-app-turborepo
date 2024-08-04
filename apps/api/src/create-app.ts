@@ -12,7 +12,9 @@ import { userConnect, userDisconnect, fetchUserChats, getUser } from './services
 import { ChatDatabase } from './global.type';
 import { channelRoom, getUsernameFromSocket, logger, userRoom } from './utils';
 import { createChat, joinChat, listChats } from './services/chat';
-import { messageServices } from './services/message';
+import { sendMessage } from './services/message';
+import { reachUser } from './services/user/reach';
+import { listMessages } from './services/message/list';
 
 export async function createApp(httpServer: HttpServer, config: Config) {
   const app = createExpressApp();
@@ -71,12 +73,12 @@ const initEventHandlers = (io: SocketServer, db: ChatDatabase) => {
     socket.on(EventName.LIST_CHAT, listChats({ io, socket, db }));
     // socket.on("channel:search", searchChannels({ io, socket, db }));
 
-    socket.on('user:get', getUser({ io, socket, db }));
-    // socket.on("user:reach", reachUser({ io, socket, db }));
+    socket.on(EventName.GET_USER, getUser({ io, socket, db }));
+    socket.on(EventName.REACH_USER, reachUser({ io, socket, db }));
     // socket.on("user:search", searchUsers({ io, socket, db }));
 
-    socket.on('message:send', messageServices.sendMessage({ io, socket, db }));
-    // socket.on("message:list", listMessages({ io, socket, db }));
+    socket.on(EventName.SEND_MESSAGE, sendMessage({ io, socket, db }));
+    socket.on(EventName.LIST_MESSAGE, listMessages({ io, socket, db }));
     // socket.on("message:ack", ackMessage({ io, socket, db }));
     // socket.on("message:typing", typingMessage({ io, socket, db }));
 

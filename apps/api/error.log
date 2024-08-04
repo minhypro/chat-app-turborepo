@@ -32,3 +32,4 @@ error: Error fetching user channels: SQLITE_ERROR: no such column: ChannelMember
 {"code":"SQLITE_ERROR","errno":1,"level":"error","message":"Error fetching user channels: SQLITE_ERROR: no such table: ChatMembers","stack":"Error: SQLITE_ERROR: no such table: ChatMembers","timestamp":"2024-08-03T12:36:53.889Z"}
 {"code":"SQLITE_ERROR","errno":1,"level":"error","message":"Failed to update user: mike SQLITE_ERROR: no such table: User","stack":"Error: SQLITE_ERROR: no such table: User","timestamp":"2024-08-03T12:38:37.173Z"}
 {"code":"SQLITE_ERROR","errno":1,"level":"error","message":"Failed to update user: mike SQLITE_ERROR: no such table: User","stack":"Error: SQLITE_ERROR: no such table: User","timestamp":"2024-08-03T12:51:19.534Z"}
+{"level":"error","message":"failed to get messages: [Error: SQLITE_MISMATCH: datatype mismatch] {\n  errno: 20,\n  code: 'SQLITE_MISMATCH'\n}","timestamp":"2024-08-04T04:03:18.358Z"}

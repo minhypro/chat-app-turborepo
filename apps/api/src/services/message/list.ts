@@ -1,9 +1,8 @@
-import { ajv } from '@/utils';
+import { ajv, logger } from '@/utils';
 import { IEventListeners, TEventListenerCallback } from '../type';
-import type { Chat } from '@repo/types';
 
 interface IQueryPayLoad {
-  query: string;
+  chatId: number;
   limit: number;
   offset: number;
 }
@@ -11,15 +10,14 @@ interface IQueryPayLoad {
 const validate = ajv.compile<IQueryPayLoad>({
   type: 'object',
   properties: {
-    query: { type: 'string' },
+    chatId: { type: 'number' },
     limit: { type: 'number' },
     offset: { type: 'number' },
   },
-
   additionalProperties: false,
 });
 
-export function listChats({ db }: IEventListeners) {
+export function listMessages({ db }: IEventListeners) {
   return async (payload: IQueryPayLoad, callback: TEventListenerCallback) => {
     if (typeof callback !== 'function') {
       return;
@@ -33,27 +31,22 @@ export function listChats({ db }: IEventListeners) {
     }
 
     try {
-      const searchPattern = `%${payload.query}%`;
+      const messages = await db.all(
+        'SELECT * FROM Messages WHERE chat_id = ? ORDER BY created_at ASC LIMIT ? OFFSET ?',
+        [payload.chatId, payload.limit, payload.offset],
+      );
 
-      const chats = searchPattern
-        ? await db.all<Chat[]>('SELECT * FROM Chats WHERE is_public = TRUE AND name LIKE ? LIMIT ? OFFSET ?', [
-            searchPattern,
-            payload.limit,
-            payload.offset,
-          ])
-        : await db.all<Chat[]>('SELECT * FROM Chats WHERE is_public = TRUE LIMIT ? OFFSET ?', [
-            payload.limit,
-            payload.offset,
-          ]);
+      logger.info('messages: %j', messages);
 
       return callback({
         status: 'OK',
-        data: chats,
+        data: messages,
       });
     } catch (e) {
+      logger.error('failed to get messages: %s', e);
       return callback({
         status: 'ERROR',
-        errors: [{ message: 'failed to query' }],
+        errors: [{ message: 'failed to get messages' }],
       });
     }
   };
