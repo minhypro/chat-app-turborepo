@@ -49,6 +49,12 @@ const initEventHandlers = (io: SocketServer, db: ChatDatabase) => {
   io.use(async (socket, next) => {
     const { username } = getAuthFromSocket(socket);
 
+    if (!username) {
+      // Send an error message to the client
+      const err = new Error('Invalid username');
+      return next(err);
+    }
+
     const userId = await userConnect(db, username);
     socket.handshake.auth.userId = userId;
 
