@@ -1,31 +1,31 @@
-"use server";
+'use server';
 
-import { cookies } from "next/headers";
-import { redirect } from "next/navigation";
+import { cookies } from 'next/headers';
+import { redirect } from 'next/navigation';
 
 async function handleLogin(sessionData: string) {
-  cookies().set("currentUser", sessionData, {
+  cookies().set('currentUser', sessionData, {
     httpOnly: true,
     maxAge: 60 * 60 * 24 * 7, // One week
-    path: "/",
+    path: '/',
   });
-  return "Login successful";
+  return 'Login successful';
 }
 
 export async function login(_currentState: unknown, formData: FormData) {
-  const name = formData.get("name") as string;
+  const name = formData.get('name') as string;
   if (!name) {
-    return { message: "Name is required", isLoginSuccessful: false };
+    return { message: 'Name is required', isLoginSuccessful: false };
   } else {
-    const loginSuccessful = await handleLogin(name);
-    return { isLoginSuccessful: true, message: loginSuccessful };
+    await handleLogin(name);
+    return { isLoginSuccessful: true, username: name };
   }
 }
 
 function handleLogout() {
-  cookies().delete("currentUser");
+  cookies().delete('currentUser');
 
-  redirect("/login");
+  redirect('/login');
 }
 
 export async function logout() {

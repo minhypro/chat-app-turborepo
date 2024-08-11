@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { useFormStatus } from "react-dom";
-import { login } from "../lib/actions";
-import { useActionState } from "react";
-import { useRouter } from "next/navigation";
+import { useFormStatus } from 'react-dom';
+import { login } from '../lib/actions';
+import { useActionState } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function Page() {
   const [loginResult, loginDispatch] = useActionState(login, undefined);
@@ -11,12 +11,12 @@ export default function Page() {
   const router = useRouter();
 
   if (loginResult?.isLoginSuccessful) {
-    router.push("/chat");
+    router.push(`/chat?username=${loginResult.username}`);
   }
 
   return (
     <form action={loginDispatch}>
-      <input type='name' name='name' placeholder='name' required />
+      <input type="name" name="name" placeholder="name" required />
       <div>{loginResult && <p>{loginResult.message}</p>}</div>
       <LoginButton />
     </form>
@@ -33,7 +33,7 @@ function LoginButton() {
   };
 
   return (
-    <button aria-disabled={pending} type='submit' onClick={handleClick}>
+    <button aria-disabled={pending} type="submit" onClick={handleClick}>
       Login
     </button>
   );

@@ -1121,3 +1121,13 @@ info: User connected: mike channels: []
 {"level":"info","message":"Table User created successfully","timestamp":"2024-08-11T02:24:48.600Z"}
 {"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-11T02:24:48.601Z"}
 {"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-11T02:24:48.605Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-11T02:59:47.252Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-11T02:59:47.256Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-11T02:59:47.256Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-11T02:59:47.257Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-11T02:59:47.259Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-11T08:36:49.187Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-11T08:36:49.189Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-11T08:36:49.189Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-11T08:36:49.190Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-11T08:36:49.191Z"}
