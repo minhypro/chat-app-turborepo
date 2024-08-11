@@ -1131,3 +1131,84 @@ info: User connected: mike channels: []
 {"level":"info","message":"Table User created successfully","timestamp":"2024-08-11T08:36:49.189Z"}
 {"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-11T08:36:49.190Z"}
 {"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-11T08:36:49.191Z"}
+{"level":"info","message":"Table Chats created successfully","timestamp":"2024-08-11T08:36:51.694Z"}
+{"level":"info","message":"Table Messages created successfully","timestamp":"2024-08-11T08:36:51.696Z"}
+{"level":"info","message":"Table User created successfully","timestamp":"2024-08-11T08:36:51.696Z"}
+{"level":"info","message":"Table ChatsMembers created successfully","timestamp":"2024-08-11T08:36:51.696Z"}
+{"level":"info","message":"Server running at http://localhost:4000","timestamp":"2024-08-11T08:36:51.698Z"}
+{"level":"info","message":"User connected: Y Le chats: []","timestamp":"2024-08-11T08:36:54.502Z"}
+{"level":"info","message":"User connected: Y Le chats: []","timestamp":"2024-08-11T08:37:00.889Z"}
+{"level":"info","message":"User connected: Y Le chats: []","timestamp":"2024-08-11T08:45:04.704Z"}
+{"level":"info","message":"User connected: Y Le chats: []","timestamp":"2024-08-11T08:45:23.724Z"}
+{"level":"info","message":"User connected: Y Le chats: []","timestamp":"2024-08-11T08:45:23.726Z"}
+{"level":"info","message":"User connected: Y Le chats: []","timestamp":"2024-08-11T08:45:24.920Z"}
+{"level":"info","message":"User connected: Y Le chats: []","timestamp":"2024-08-11T08:45:25.725Z"}
+{"level":"info","message":"User connected: Y Le chats: []","timestamp":"2024-08-11T08:45:25.727Z"}
+{"level":"info","message":"User connected: Y Le chats: []","timestamp":"2024-08-11T08:45:25.751Z"}
+{"level":"info","message":"User connected: Y Le chats: []","timestamp":"2024-08-11T08:45:25.753Z"}
+{"level":"info","message":"User connected: Y Le chats: []","timestamp":"2024-08-11T08:45:25.810Z"}
+{"level":"info","message":"User connected: Y Le chats: []","timestamp":"2024-08-11T08:45:25.857Z"}
+{"level":"info","message":"User connected: Y Le chats: []","timestamp":"2024-08-11T08:45:25.860Z"}
+{"level":"info","message":"User connected: Y Le chats: []","timestamp":"2024-08-11T08:45:52.809Z"}
+{"level":"info","message":"User connected: asdasdasd chats: []","timestamp":"2024-08-11T08:47:20.041Z"}
+{"level":"info","message":"User connected: asdasdasd chats: []","timestamp":"2024-08-11T08:47:20.052Z"}
+{"level":"info","message":"User connected: asdasdasd chats: []","timestamp":"2024-08-11T08:47:20.092Z"}
+{"level":"info","message":"User connected: asdasdasd chats: []","timestamp":"2024-08-11T08:47:20.095Z"}
+{"level":"info","message":"User connected: asdasdasd chats: []","timestamp":"2024-08-11T08:47:20.124Z"}
+{"level":"info","message":"User connected: 123123 chats: []","timestamp":"2024-08-11T08:47:42.797Z"}
+{"level":"info","message":"User connected: 123123 chats: []","timestamp":"2024-08-11T08:47:42.802Z"}
+{"level":"info","message":"User connected: 123123 chats: []","timestamp":"2024-08-11T08:47:42.825Z"}
+{"level":"info","message":"User connected: 123123 chats: []","timestamp":"2024-08-11T08:47:42.827Z"}
+{"level":"info","message":"User connected: 123123 chats: []","timestamp":"2024-08-11T08:47:42.858Z"}
+{"level":"info","message":"User connected: 123123 chats: []","timestamp":"2024-08-11T08:47:47.645Z"}
+{"level":"info","message":"User connected: 123123 chats: []","timestamp":"2024-08-11T08:47:48.305Z"}
+{"level":"info","message":"User connected: 123123 chats: []","timestamp":"2024-08-11T08:47:48.307Z"}
+{"level":"info","message":"User connected: 123123 chats: []","timestamp":"2024-08-11T08:47:48.324Z"}
+{"level":"info","message":"User connected: 123123 chats: []","timestamp":"2024-08-11T08:47:48.324Z"}
+{"level":"info","message":"User connected: 123123 chats: []","timestamp":"2024-08-11T08:47:48.362Z"}
+{"level":"info","message":"User connected: 123123 chats: []","timestamp":"2024-08-11T08:47:48.446Z"}
+{"level":"info","message":"User connected: 123123 chats: []","timestamp":"2024-08-11T08:47:48.449Z"}
+{"level":"info","message":"User connected: Y Le chats: []","timestamp":"2024-08-11T08:47:57.937Z"}
+{"level":"info","message":"User connected: Y Le chats: []","timestamp":"2024-08-11T08:47:58.582Z"}
+{"level":"info","message":"User connected: Y Le chats: []","timestamp":"2024-08-11T08:47:58.585Z"}
+{"level":"info","message":"User connected: Y Le chats: []","timestamp":"2024-08-11T08:47:58.603Z"}
+{"level":"info","message":"User connected: Y Le chats: []","timestamp":"2024-08-11T08:47:58.604Z"}
+{"level":"info","message":"User connected: 123123 chats: []","timestamp":"2024-08-11T08:47:58.674Z"}
+{"level":"info","message":"User connected: Y Le chats: []","timestamp":"2024-08-11T08:47:58.753Z"}
+{"level":"info","message":"User connected: Y Le chats: []","timestamp":"2024-08-11T08:47:58.755Z"}
+{"level":"info","message":"User connected: asd chats: []","timestamp":"2024-08-11T08:49:10.506Z"}
+{"level":"info","message":"User connected: asd chats: []","timestamp":"2024-08-11T08:49:10.527Z"}
+{"level":"info","message":"User connected: asd chats: []","timestamp":"2024-08-11T08:49:10.561Z"}
+{"level":"info","message":"User connected: asd chats: []","timestamp":"2024-08-11T08:49:10.565Z"}
+{"level":"info","message":"User connected: asd chats: []","timestamp":"2024-08-11T08:49:10.609Z"}
+{"level":"info","message":"User connected: asd chats: []","timestamp":"2024-08-11T08:49:10.668Z"}
+{"level":"info","message":"User connected: asd chats: []","timestamp":"2024-08-11T08:49:10.670Z"}
+{"level":"info","message":"User connected: asd chats: []","timestamp":"2024-08-11T08:49:14.488Z"}
+{"level":"info","message":"User connected: asd chats: []","timestamp":"2024-08-11T08:49:15.108Z"}
+{"level":"info","message":"User connected: asd chats: []","timestamp":"2024-08-11T08:49:15.121Z"}
+{"level":"info","message":"User connected: asd chats: []","timestamp":"2024-08-11T08:49:15.148Z"}
+{"level":"info","message":"User connected: asd chats: []","timestamp":"2024-08-11T08:49:15.151Z"}
+{"level":"info","message":"User connected: asd chats: []","timestamp":"2024-08-11T08:49:15.223Z"}
+{"level":"info","message":"User connected: asd chats: []","timestamp":"2024-08-11T08:49:15.263Z"}
+{"level":"info","message":"User connected: asd chats: []","timestamp":"2024-08-11T08:49:15.269Z"}
+{"level":"info","message":"User connected: asd chats: []","timestamp":"2024-08-11T08:49:21.376Z"}
+{"level":"info","message":"User connected: asd chats: []","timestamp":"2024-08-11T08:49:22.010Z"}
+{"level":"info","message":"User connected: asd chats: []","timestamp":"2024-08-11T08:49:22.033Z"}
+{"level":"info","message":"User connected: asd chats: []","timestamp":"2024-08-11T08:49:22.059Z"}
+{"level":"info","message":"User connected: asd chats: []","timestamp":"2024-08-11T08:49:22.060Z"}
+{"level":"info","message":"User connected: asd chats: []","timestamp":"2024-08-11T08:49:22.123Z"}
+{"level":"info","message":"User connected: asd chats: []","timestamp":"2024-08-11T08:49:22.166Z"}
+{"level":"info","message":"User connected: asd chats: []","timestamp":"2024-08-11T08:49:22.169Z"}
+{"level":"info","message":"User connected: asd chats: []","timestamp":"2024-08-11T08:49:25.045Z"}
+{"level":"info","message":"User connected: asd chats: []","timestamp":"2024-08-11T08:49:25.696Z"}
+{"level":"info","message":"User connected: asd chats: []","timestamp":"2024-08-11T08:49:25.702Z"}
+{"level":"info","message":"User connected: asd chats: []","timestamp":"2024-08-11T08:49:25.720Z"}
+{"level":"info","message":"User connected: asd chats: []","timestamp":"2024-08-11T08:49:25.721Z"}
+{"level":"info","message":"User connected: asd chats: []","timestamp":"2024-08-11T08:49:25.762Z"}
+{"level":"info","message":"User connected: asd chats: []","timestamp":"2024-08-11T08:49:25.825Z"}
+{"level":"info","message":"User connected: asd chats: []","timestamp":"2024-08-11T08:49:25.826Z"}
+{"level":"info","message":"User connected: asd chats: []","timestamp":"2024-08-11T08:49:44.283Z"}
+{"level":"info","message":"User connected: asd chats: []","timestamp":"2024-08-11T08:51:42.673Z"}
+{"level":"info","message":"User connected: asd chats: []","timestamp":"2024-08-11T08:52:09.339Z"}
+{"level":"info","message":"User connected: asd chats: []","timestamp":"2024-08-11T08:52:12.628Z"}
+{"level":"info","message":"User connected: asd chats: []","timestamp":"2024-08-11T08:52:16.693Z"}

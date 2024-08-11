@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 import { initSocket } from '../socket';
 import { logout } from '../lib/actions';
 import { useRouter, useSearchParams } from 'next/navigation';
+// import { Button } from '@repo/ui-component/dist/button';
+import { Button } from '@repo/ui-component/button';
 
 export default function Chat() {
   const username = useSearchParams().get('username');
@@ -59,7 +61,8 @@ export default function Chat() {
   }
 
   return (
-    <div>
+    <div className="p-4">
+      <Button variant="default">Hello</Button>
       <p>Status: {isConnected ? 'connected' : 'disconnected'}</p>
       <p>Transport: {transport}</p>
       <button onClick={handleConnectSocket}>Connect socket</button>
